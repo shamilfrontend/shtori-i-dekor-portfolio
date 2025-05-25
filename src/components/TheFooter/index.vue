@@ -2,16 +2,10 @@
   <footer class="footer">
     <ul class="footer__list">
       <li class="footer__item">
-        <img src="" alt="" class="footer__icon" />
-        <a href="" class="footer__link">info@photography.com</a>
+        <a href="mailto:shtori-i-dekor@mail.ru" class="footer__link" target="_blank">shtori-i-dekor@mail.ru</a>
       </li>
       <li class="footer__item">
-        <img src="" alt="" class="footer__icon" />
-        <a href="" class="footer__link">Michelle +1 593 354 493</a>
-      </li>
-      <li class="footer__item">
-        <img src="" alt="" class="footer__icon" />
-        <a href="" class="footer__link">Lucas: +1 493 346 982</a>
+        <a href="tel:+79165811715" class="footer__link">+7 916 581-17-15</a>
       </li>
     </ul>
   </footer>
@@ -53,6 +47,10 @@ defineOptions({ name: "TheFooter" });
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
+  }
+
+  &__link {
+    cursor: pointer;
   }
 }
 </style>

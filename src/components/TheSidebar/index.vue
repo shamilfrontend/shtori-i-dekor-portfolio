@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <img src="../../assets/images/logo.png" alt="Logo" class="logo" />
+    <img src="../../assets/images/logo.png" alt="Logo" class="sidebar__logo" />
 
     <nav class="sidebar__nav">
       <ul class="sidebar__list">
@@ -33,18 +33,23 @@
 
     <ul class="sidebar__social">
       <li class="social__item">
-        <a href="" class="social__link">
-          <img src="" alt="facebook" class="social__icon" />
+        <a href="https://t.me/shtori_i_dekor_ru" class="social__link" target="_blank">
+          <img src="../../assets/images/telegram.svg" alt="telegram" class="social__icon" />
         </a>
       </li>
       <li class="social__item">
-        <a href="" class="social__link">
-          <img src="" alt="twitter" class="social__icon" />
+        <a href="https://api.whatsapp.com/send/?phone=79165811715" class="social__link" target="_blank">
+          <img src="../../assets/images/whatsapp.svg" alt="whatsapp" class="social__icon" />
         </a>
       </li>
       <li class="social__item">
-        <a href="" class="social__link">
-          <img src="" alt="instagram" class="social__icon" />
+        <a href="https://www.instagram.com/shtoriidekor" class="social__link" target="_blank">
+          <img src="../../assets/images/instagram.svg" alt="instagram" class="social__icon" />
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="https://vk.me/shtoriidekor" class="social__link" target="_blank">
+          <img src="../../assets/images/vk.svg" alt="VK" class="social__icon" />
         </a>
       </li>
     </ul>
@@ -60,7 +65,7 @@ defineOptions({ name: "TheSidebar" });
   text-align: center;
   padding-top: 50px;
 
-  .logo {
+  &__logo {
     width: 130px;
   }
 
@@ -71,7 +76,10 @@ defineOptions({ name: "TheSidebar" });
     margin: 0;
 
     @media (max-width: 1200px) {
-      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 
@@ -135,6 +143,11 @@ defineOptions({ name: "TheSidebar" });
 
     @media (max-width: 1200px) {
       display: none;
+    }
+
+    .social__icon {
+      width: 20px;
+      height: 20px;
     }
   }
 }

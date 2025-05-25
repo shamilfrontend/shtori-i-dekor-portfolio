@@ -24,58 +24,61 @@
 
       <div class="container">
         <div class="box">
-          <img src="./assets/images/post-01.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-01.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-07.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-02.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-02.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-03.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-11.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-04.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-08.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-05.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-03.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-06.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-06.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-07.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-09.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-08.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-04.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-09.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-12.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-10.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-10.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-11.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/post-05.jpg" alt="" class="box__img" />
+          <img src="./assets/images/gallery-12.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-03.png" alt="" class="box__img" />
+          <img src="./assets/images/gallery-13.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-05.png" alt="" class="box__img" />
+          <img src="./assets/images/gallery-14.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-02.png" alt="" class="box__img" />
+          <img src="./assets/images/gallery-15.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-01.png" alt="" class="box__img" />
+          <img src="./assets/images/gallery-16.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-04.png" alt="" class="box__img" />
+          <img src="./assets/images/gallery-17.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-06.png" alt="" class="box__img" />
+          <img src="./assets/images/gallery-18.jpg" alt="" class="box__img" />
+        </div>
+        <div class="box">
+          <img src="./assets/images/gallery-19.jpg" alt="" class="box__img" />
         </div>
       </div>
 
