@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <img src="../../images/logo.png" alt="Logo" class="logo">
+    <img src="../../assets/images/logo.png" alt="Logo" class="logo" />
 
     <nav class="sidebar__nav">
       <ul class="sidebar__list">
@@ -51,12 +51,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'TheSidebar'
-})
+<script lang="ts" setup>
+defineOptions({ name: "TheSidebar" });
 </script>
 
 <style scoped lang="scss">
@@ -66,7 +62,6 @@ export default defineComponent({
 
   .logo {
     width: 130px;
-    height: 109px;
   }
 
   &__list {

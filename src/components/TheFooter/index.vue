@@ -17,12 +17,8 @@
   </footer>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue'
-
-  export default defineComponent({
-    name: 'TheFooter'
-  })
+<script lang="ts" setup>
+defineOptions({ name: "TheFooter" });
 </script>
 
 <style scoped lang="scss">
@@ -48,8 +44,8 @@
     }
 
     @media (max-width: 800px) {
-        margin-bottom: 30px;
-      }
+      margin-bottom: 30px;
+    }
   }
 
   &__link {

@@ -84,21 +84,18 @@
   </div>
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import TheSidebar from "./components/TheSidebar/index.vue";
+import TheFooter from "./components/TheFooter/index.vue";
 
-  import TheSidebar from './assets/components/TheSidebar/index.vue'
-  import TheFooter from './assets/components/TheFooter/index.vue'
+defineOptions({
+  name: "App",
 
-  export default defineComponent({
-    name: 'App',
-
-    components: {
-      TheSidebar,
-      TheFooter
-    }
-  })
-  
+  components: {
+    TheSidebar,
+    TheFooter,
+  },
+});
 </script>
 
 <style lang="scss">
@@ -118,8 +115,6 @@ img {
     flex-direction: column;
   }
 
-  //
-
   .main {
     padding-top: 50px;
     margin-right: 50px;
@@ -134,68 +129,67 @@ img {
       margin-right: 15px;
       margin-left: 15px;
     }
- 
-    .header {
-      &__list {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px 40px;
-        margin-bottom: 50px;
-        padding: 0;
-      }
-
-      &__link {
-        text-decoration: none;
-        color: #6e6e6e;
-        text-transform: uppercase;
-        font-size: 15px;
-        letter-spacing: 2px;
-        font-weight: 300;
-        transition: all 0.3s linear;
-
-        &:active {
-          color: #000;
-        }
-
-        &:hover {
-          color: #000;
-        }
-
-        @media (max-width: 1200px) {
-          font-size: 14px;
-        }
-      }
+  }
+  
+  .header {
+    &__list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 40px;
+      margin-bottom: 50px;
+      padding: 0;
     }
 
-    .container {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      columns: 3;
-      column-gap: 50px;
+    &__link {
+      text-decoration: none;
+      color: #6e6e6e;
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 2px;
+      font-weight: 300;
+      transition: all 0.3s linear;
+
+      &:active {
+        color: #000;
+      }
+
+      &:hover {
+        color: #000;
+      }
 
       @media (max-width: 1200px) {
-        columns: 2;
-        column-gap: 30px;
+        font-size: 14px;
       }
+    }
+  }
 
-      @media (max-width: 700px) {
-        columns: 1;
-      }
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    columns: 3;
+    column-gap: 50px;
 
-      .box {
-        width: 100%;
-        overflow: hidden;
-        break-inside: avoid;
-        padding-bottom: 50px;
+    @media (max-width: 1200px) {
+      columns: 2;
+      column-gap: 30px;
+    }
 
-        @media (max-width: 1200px) {
-          padding-bottom: 30px;
-        }
-      }
+    @media (max-width: 700px) {
+      columns: 1;
+    }
+  }
+  .box {
+    width: 100%;
+    overflow: hidden;
+    break-inside: avoid;
+    padding-bottom: 50px;
+
+    @media (max-width: 1200px) {
+      padding-bottom: 30px;
     }
   }
 }
