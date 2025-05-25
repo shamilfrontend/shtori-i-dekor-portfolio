@@ -1,57 +1,6 @@
-<script setup lang="ts"></script>
-
 <template>
   <div class="wrapper">
-    <div class="sidebar">
-      <img src="./assets/images/logo.png" alt="Logo" class="logo" />
-
-      <nav class="sidebar__nav">
-        <ul class="sidebar__list">
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">Home</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">About Us</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">Services</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">Prices</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">Shop</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">Blog</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">Contact</a>
-          </li>
-          <li class="sidebar__item">
-            <a href="" class="sidebar__link">Cost Calculator</a>
-          </li>
-        </ul>
-      </nav>
-
-      <ul class="sidebar__social">
-        <li class="social__item">
-          <a href="" class="social__link">
-            <img src="" alt="facebook" class="social__icon" />
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link">
-            <img src="" alt="twitter" class="social__icon" />
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link">
-            <img src="" alt="instagram" class="social__icon" />
-          </a>
-        </li>
-      </ul>
-    </div>
+    <the-sidebar />
 
     <div class="main">
       <header class="header">
@@ -130,25 +79,27 @@
         </div>
       </div>
 
-      <footer class="footer">
-        <ul class="footer__list">
-          <li class="footer__item">
-            <img src="" alt="" class="footer__icon" />
-            <a href="" class="footer__link">info@photography.com</a>
-          </li>
-          <li class="footer__item">
-            <img src="" alt="" class="footer__icon" />
-            <a href="" class="footer__link">Michelle +1 593 354 493</a>
-          </li>
-          <li class="footer__item">
-            <img src="" alt="" class="footer__icon" />
-            <a href="" class="footer__link">Lucas: +1 493 346 982</a>
-          </li>
-        </ul>
-      </footer>
+      <the-footer />
     </div>
   </div>
 </template>
+
+<script lang="ts">
+  import { defineComponent } from 'vue';
+
+  import TheSidebar from './assets/components/TheSidebar/index.vue'
+  import TheFooter from './assets/components/TheFooter/index.vue'
+
+  export default defineComponent({
+    name: 'App',
+
+    components: {
+      TheSidebar,
+      TheFooter
+    }
+  })
+  
+</script>
 
 <style lang="scss">
 img {
@@ -167,89 +118,7 @@ img {
     flex-direction: column;
   }
 
-  .sidebar {
-    text-align: center;
-    padding-top: 50px;
-
-    .logo {
-      width: 130px;
-      height: 109px;
-    }
-
-    &__list {
-      text-align: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      @media (max-width: 1200px) {
-        text-align: left;
-      }
-    }
-
-    &__item {
-      padding: 13px 20px;
-
-      @media (max-width: 1200px) {
-        padding: 0;
-      }
-    }
-
-    &__link {
-      text-decoration: none;
-      color: #6e6e6e;
-      text-transform: uppercase;
-      font-size: 14px;
-      letter-spacing: 2px;
-      font-weight: 300;
-      transition: all 0.3s linear;
-
-      @media (max-width: 1200px) {
-        display: block;
-        padding: 10px 20px;
-        font-size: 16px;
-        text-transform: capitalize;
-        transition: none;
-      }
-
-      &:active {
-        color: #000;
-
-        @media (max-width: 1200px) {
-          display: block;
-          color: #fff;
-          background-color: #000;
-        }
-      }
-
-      &:hover {
-        color: #000;
-      }
-
-      @media (max-width: 1200px) {
-        &:active {
-          color: #fff;
-          background-color: #000;
-        }
-      }
-    }
-
-    &__social {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-
-      .social__item:not(:last-child) {
-        margin-right: 10px;
-      }
-
-      @media (max-width: 1200px) {
-        display: none;
-      }
-    }
-  }
+  //
 
   .main {
     padding-top: 50px;
@@ -327,39 +196,6 @@ img {
           padding-bottom: 30px;
         }
       }
-    }
-  }
-
-  .footer {
-    &__list {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @media (max-width: 1200px) {
-        flex-direction: column;
-      }
-    }
-
-    &__item:not(:last-child) {
-      margin-right: 50px;
-
-      @media (max-width: 1200px) {
-        margin-right: 0;
-        margin-bottom: 15px;
-
-        @media (max-width: 800px) {
-          margin-bottom: 30px;
-        }
-      }
-    }
-
-    &__link {
-      color: #000;
-      font-size: 16px;
-      font-weight: 300;
-      text-decoration: none;
     }
   }
 }
