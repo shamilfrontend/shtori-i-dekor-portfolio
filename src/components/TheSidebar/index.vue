@@ -1,6 +1,10 @@
+<script lang="ts" setup>
+defineOptions({ name: "TheSidebar" });
+</script>
+
 <template>
   <div class="sidebar">
-    <img src="../../assets/images/logo.png" alt="Logo" class="sidebar__logo" />
+    <img src="/images/logo.png" alt="Logo" class="sidebar__logo" />
 
     <nav class="sidebar__nav">
       <ul class="sidebar__list">
@@ -20,13 +24,7 @@
           <a href="" class="sidebar__link">Shop</a>
         </li>
         <li class="sidebar__item">
-          <a href="" class="sidebar__link">Blog</a>
-        </li>
-        <li class="sidebar__item">
           <a href="" class="sidebar__link">Contact</a>
-        </li>
-        <li class="sidebar__item">
-          <a href="" class="sidebar__link">Cost Calculator</a>
         </li>
       </ul>
     </nav>
@@ -36,8 +34,6 @@
 </template>
 
 <script lang="ts" setup>
-import TheSocial from "../TheSocial/index.vue";
-
 defineOptions({ name: "TheSidebar" });
 </script>
 
@@ -48,6 +44,7 @@ defineOptions({ name: "TheSidebar" });
 
   &__logo {
     width: 130px;
+    margin-bottom: 48px;
   }
 
   &__list {
@@ -108,6 +105,27 @@ defineOptions({ name: "TheSidebar" });
         color: #fff;
         background-color: #000;
       }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+
+    .social__item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
+    .social__icon {
+      width: 20px;
+      height: 20px;
     }
   }
 }

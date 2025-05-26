@@ -7,16 +7,22 @@
         <nav class="header__nav">
           <ul class="header__list">
             <li class="header__item">
-              <a href="" class="header__link">All</a>
+              <a href="" class="header__link">Все</a>
             </li>
             <li class="header__item">
-              <a href="" class="header__link">Bridal Portraits</a>
+              <a href="" class="header__link">Меню 1</a>
             </li>
             <li class="header__item">
-              <a href="" class="header__link">Ceremony Coverage</a>
+              <a href="" class="header__link">Меню 2</a>
             </li>
             <li class="header__item">
-              <a href="" class="header__link">Photo Booth</a>
+              <a href="" class="header__link">Меню 3</a>
+            </li>
+            <li class="header__item">
+              <a href="" class="header__link">Меню 4</a>
+            </li>
+            <li class="header__item">
+              <a href="" class="header__link">Меню 5</a>
             </li>
           </ul>
         </nav>
@@ -24,61 +30,61 @@
 
       <div class="container">
         <div class="box">
-          <img src="./assets/images/gallery-01.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-01.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-02.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-02.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-03.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-03.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-04.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-04.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-05.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-05.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-06.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-06.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-07.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-07.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-08.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-08.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-09.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-09.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-10.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-10.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-11.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-11.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-12.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-12.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-13.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-13.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-14.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-14.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-15.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-15.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-16.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-16.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-17.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-17.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-18.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-18.jpg" alt="" class="box__img" />
         </div>
         <div class="box">
-          <img src="./assets/images/gallery-19.jpg" alt="" class="box__img" />
+          <img src="/images/gallery-19.jpg" alt="" class="box__img" />
         </div>
       </div>
 
