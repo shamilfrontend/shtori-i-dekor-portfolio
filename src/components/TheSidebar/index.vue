@@ -1,6 +1,10 @@
+<script lang="ts" setup>
+defineOptions({ name: "TheSidebar" });
+</script>
+
 <template>
   <div class="sidebar">
-    <img src="../../assets/images/logo.png" alt="Logo" class="sidebar__logo" />
+    <img src="/images/logo.png" alt="Logo" class="sidebar__logo" />
 
     <nav class="sidebar__nav">
       <ul class="sidebar__list">
@@ -49,10 +53,6 @@
     </ul>
   </div>
 </template>
-
-<script lang="ts" setup>
-defineOptions({ name: "TheSidebar" });
-</script>
 
 <style scoped lang="scss">
 .sidebar {
