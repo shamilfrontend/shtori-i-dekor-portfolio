@@ -91,14 +91,7 @@
 import TheSidebar from "./components/TheSidebar/index.vue";
 import TheFooter from "./components/TheFooter/index.vue";
 
-defineOptions({
-  name: "App",
-
-  components: {
-    TheSidebar,
-    TheFooter,
-  },
-});
+defineOptions({ name: "App" });
 </script>
 
 <style lang="scss">
