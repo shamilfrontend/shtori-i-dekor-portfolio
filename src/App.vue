@@ -7,16 +7,22 @@
         <nav class="header__nav">
           <ul class="header__list">
             <li class="header__item">
-              <a href="" class="header__link">All</a>
+              <a href="" class="header__link">Все</a>
             </li>
             <li class="header__item">
-              <a href="" class="header__link">Bridal Portraits</a>
+              <a href="" class="header__link">Меню 1</a>
             </li>
             <li class="header__item">
-              <a href="" class="header__link">Ceremony Coverage</a>
+              <a href="" class="header__link">Меню 2</a>
             </li>
             <li class="header__item">
-              <a href="" class="header__link">Photo Booth</a>
+              <a href="" class="header__link">Меню 3</a>
+            </li>
+            <li class="header__item">
+              <a href="" class="header__link">Меню 4</a>
+            </li>
+            <li class="header__item">
+              <a href="" class="header__link">Меню 5</a>
             </li>
           </ul>
         </nav>
