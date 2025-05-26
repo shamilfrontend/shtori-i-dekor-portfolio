@@ -20,13 +20,7 @@
           <a href="" class="sidebar__link">Shop</a>
         </li>
         <li class="sidebar__item">
-          <a href="" class="sidebar__link">Blog</a>
-        </li>
-        <li class="sidebar__item">
           <a href="" class="sidebar__link">Contact</a>
-        </li>
-        <li class="sidebar__item">
-          <a href="" class="sidebar__link">Cost Calculator</a>
         </li>
       </ul>
     </nav>
@@ -67,6 +61,7 @@ defineOptions({ name: "TheSidebar" });
 
   &__logo {
     width: 130px;
+    margin-bottom: 32px;
   }
 
   &__list {
@@ -135,6 +130,7 @@ defineOptions({ name: "TheSidebar" });
     justify-content: center;
     align-items: center;
     list-style: none;
+    margin-top: 32px;
     padding: 0;
 
     .social__item:not(:last-child) {
