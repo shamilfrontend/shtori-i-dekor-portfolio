@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import TheSocial from "../TheSocial/index.vue";
+
 defineOptions({ name: "TheSidebar" });
 </script>
 
@@ -32,10 +34,6 @@ defineOptions({ name: "TheSidebar" });
     <the-social />
   </div>
 </template>
-
-<script lang="ts" setup>
-defineOptions({ name: "TheSidebar" });
-</script>
 
 <style scoped lang="scss">
 .sidebar {
