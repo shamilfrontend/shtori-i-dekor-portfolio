@@ -61,7 +61,7 @@ defineOptions({ name: "TheSidebar" });
 
   &__logo {
     width: 130px;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
   }
 
   &__list {
@@ -130,8 +130,13 @@ defineOptions({ name: "TheSidebar" });
     justify-content: center;
     align-items: center;
     list-style: none;
-    margin-top: 32px;
+    margin: 48px 0 0;
     padding: 0;
+
+    .social__icon {
+      width: 20px;
+      height: 20px;
+    }
 
     .social__item:not(:last-child) {
       margin-right: 10px;
@@ -139,11 +144,6 @@ defineOptions({ name: "TheSidebar" });
 
     @media (max-width: 1200px) {
       display: none;
-    }
-
-    .social__icon {
-      width: 20px;
-      height: 20px;
     }
   }
 }
