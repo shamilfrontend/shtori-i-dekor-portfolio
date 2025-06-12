@@ -59,33 +59,6 @@
         <div class="box">
           <img src="/images/gallery-10.jpg" alt="" class="box__img" />
         </div>
-        <div class="box">
-          <img src="/images/gallery-11.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-12.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-13.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-14.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-15.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-16.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-17.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-18.jpg" alt="" class="box__img" />
-        </div>
-        <div class="box">
-          <img src="/images/gallery-19.jpg" alt="" class="box__img" />
-        </div>
       </div>
 
       <the-footer />
