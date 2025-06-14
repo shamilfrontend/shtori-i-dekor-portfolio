@@ -40,12 +40,10 @@ img {
 }
 
 .main {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding: 32px;
 
     &__inner {
-        min-height: calc(100vh - 48px - 48px - 20px);
-        padding-bottom: 32px;
+        min-height: calc(100vh - 32px - 32px);
     }
 
     @media (max-width: 1200px) {
