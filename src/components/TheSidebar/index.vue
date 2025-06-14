@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import TheSocial from './TheSocial/index.vue';
+import SidebarSocial from './SidebarSocial/index.vue';
+import SidebarContacts from './SidebarContacts/index.vue';
 
 defineOptions({name: 'TheSidebar'});
 
@@ -7,54 +8,44 @@ const menuList = [
     {
         id: 1,
         link: '/',
-        name: 'Home',
+        name: 'Главная',
     },
     {
         id: 2,
-        link: '/',
-        name: 'About Us',
+        link: '/about',
+        name: 'О нас',
     },
     {
         id: 3,
-        link: '/',
-        name: 'Services',
+        link: '/services-and-prices',
+        name: 'Услуги и цены',
     },
     {
         id: 4,
-        link: '/',
-        name: 'Prices',
-    },
-    {
-        id: 5,
-        link: '/',
-        name: 'Shop',
-    },
-    {
-        id: 6,
-        link: '/',
-        name: 'Contact',
+        link: '/contacts',
+        name: 'Контакты',
     },
 ];
 </script>
 
 <template>
-    <div class="sidebar">
+    <div class="the-sidebar">
         <img
             src="/images/logo.png"
             alt="Logo"
-            class="sidebar__logo"
+            class="the-sidebar__logo"
         />
 
-        <nav class="sidebar__nav">
-            <ul class="sidebar__list">
+        <nav class="the-sidebar__nav">
+            <ul class="the-sidebar__list">
                 <li
                     v-for="item in menuList"
                     :key="item.id"
-                    class="sidebar__item"
+                    class="the-sidebar__item"
                 >
                     <a
                         :href="item.link"
-                        class="sidebar__link"
+                        class="the-sidebar__link"
                     >
                         {{ item.name }}
                     </a>
@@ -62,14 +53,18 @@ const menuList = [
             </ul>
         </nav>
 
-        <the-social />
+        <sidebar-social />
+
+        <sidebar-contacts />
     </div>
 </template>
 
 <style lang="scss" scoped>
-.sidebar {
-    text-align: center;
+.the-sidebar {
+    position: sticky;
+    top: 0;
     padding-top: 50px;
+    text-align: center;
 
     &__logo {
         width: 130px;
