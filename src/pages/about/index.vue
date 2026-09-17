@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "AboutPage" });
 
@@ -19,7 +20,7 @@ const { t } = useI18n();
 
       <figure class="about-page__media">
         <img
-          src="/works/river-tower/6.jpg"
+          :src="withBase('/works/river-tower/6.jpg')"
           :alt="t('pages.about.imageAlt')"
         />
       </figure>

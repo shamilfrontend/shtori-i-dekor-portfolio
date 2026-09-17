@@ -4,6 +4,7 @@ import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 import SidebarSocial from "./SidebarSocial/index.vue";
 import SidebarContacts from "./SidebarContacts/index.vue";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "TheSidebar" });
 
@@ -32,7 +33,7 @@ function isMenuActive(link: string) {
   <aside class="the-sidebar">
     <router-link to="/" class="the-sidebar__logo-link">
       <img
-        src="/images/logo.png"
+        :src="withBase('/images/logo.png')"
         :alt="t('common.logoAlt')"
         class="the-sidebar__logo"
       />

@@ -3,8 +3,11 @@ import TheSidebar from "./components/TheSidebar/index.vue";
 import TheRightBar from "./components/TheRightBar/index.vue";
 import MobileHeader from "./components/MobileHeader/index.vue";
 import CookieConsent from "./components/CookieConsent/index.vue";
+import { withBase } from "./utils/withBase";
 
 defineOptions({ name: "App" });
+
+const watermarkUrl = `url("${withBase("/images/watermark.svg")}")`;
 </script>
 
 <template>
@@ -52,7 +55,7 @@ img {
   margin-left: var(--sidebar-width);
   margin-right: var(--rightbar-width);
   min-height: 100vh;
-  background: url("/images/watermark.svg") calc(100% + 180px) -80px / auto 1400px
+  background: v-bind(watermarkUrl) calc(100% + 180px) -80px / auto 1400px
     no-repeat;
 
   &__inner {

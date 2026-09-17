@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { useLocaleContent } from "../../composables/useLocaleContent";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "ServicesAndPricesPage" });
 
@@ -31,7 +32,7 @@ const { services } = useLocaleContent();
 
       <figure class="services-page__media">
         <img
-          src="/works/areal/06.jpg"
+          :src="withBase('/works/areal/06.jpg')"
           :alt="t('pages.services.imageAlt')"
         />
       </figure>

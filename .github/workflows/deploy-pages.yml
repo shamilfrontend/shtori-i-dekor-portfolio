@@ -1,4 +1,4 @@
-name: Deploy staging (GitHub Pages)
+name: Deploy test
 
 on:
   push:
@@ -53,6 +53,7 @@ jobs:
           path: dist
 
   deploy:
+    name: Deploy test
     needs: build
     runs-on: ubuntu-latest
     environment:

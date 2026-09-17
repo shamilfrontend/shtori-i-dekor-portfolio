@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { useLocaleContent } from "../../composables/useLocaleContent";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "ExhibitionsPage" });
 
@@ -25,7 +26,7 @@ const { exhibitions } = useLocaleContent();
 
       <figure class="exhibitions-page__media">
         <img
-          src="/works/areal/01.jpg"
+          :src="withBase('/works/areal/01.jpg')"
           :alt="t('pages.exhibitions.imageAlt')"
         />
       </figure>

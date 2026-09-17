@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { useLocaleContent } from "../../composables/useLocaleContent";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "ReviewsPage" });
 
@@ -23,7 +24,7 @@ const { reviews } = useLocaleContent();
 
       <figure class="reviews-page__media">
         <img
-          src="/works/river-tower/1.jpg"
+          :src="withBase('/works/river-tower/1.jpg')"
           :alt="t('pages.reviews.imageAlt')"
         />
       </figure>

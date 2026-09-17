@@ -3,6 +3,7 @@ import { computed, ref, watch, onUnmounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 import { setLocale, type AppLocale } from "../../i18n";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "MobileHeader" });
 
@@ -53,7 +54,7 @@ onUnmounted(() => {
   <header class="mobile-header">
     <router-link to="/" class="mobile-header__logo-link">
       <img
-        src="/images/logo.png"
+        :src="withBase('/images/logo.png')"
         :alt="t('common.logoAlt')"
         class="mobile-header__logo"
       />

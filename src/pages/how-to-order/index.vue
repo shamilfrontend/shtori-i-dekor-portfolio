@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { useLocaleContent } from "../../composables/useLocaleContent";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "HowToOrderPage" });
 
@@ -32,7 +33,7 @@ const { orderSteps } = useLocaleContent();
 
       <figure class="how-to-order-page__media">
         <img
-          src="/works/khimki-house/2.jpg"
+          :src="withBase('/works/khimki-house/2.jpg')"
           :alt="t('pages.howToOrder.imageAlt')"
         />
       </figure>
