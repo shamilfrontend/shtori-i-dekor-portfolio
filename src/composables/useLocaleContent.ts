@@ -18,7 +18,7 @@ function asStringArray(value: unknown): string[] {
 }
 
 export function useLocaleContent() {
-  const { tm, te, locale } = useI18n();
+  const { tm, locale } = useI18n();
 
   const portfolioItems = computed<PortfolioItem[]>(() => {
     void locale.value;
@@ -40,7 +40,7 @@ export function useLocaleContent() {
 
   function getPortfolioBySlug(slug: string): PortfolioItem | undefined {
     const base = getPortfolioBaseBySlug(slug);
-    if (!base || !te(`portfolio.${base.id}`)) return undefined;
+    if (!base) return undefined;
     const msg = tm(`portfolio.${base.id}`) as Record<string, unknown>;
     return {
       ...base,
