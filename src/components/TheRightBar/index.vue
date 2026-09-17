@@ -1,28 +1,50 @@
 <script lang="ts" setup>
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
+import { setLocale, type AppLocale } from "../../i18n";
 
 defineOptions({ name: "TheRightBar" });
 
 const route = useRoute();
+const { t, locale } = useI18n();
+
+const locales: AppLocale[] = ["ru", "en"];
 
 const title = computed(() => {
-  if (route.path.startsWith("/portfolio/") || route.path === "/") return "Портфолио";
-  if (route.path === "/about") return "О нас";
-  if (route.path === "/how-to-order") return "Как сделать заказ?";
-  if (route.path === "/exhibitions") return "Мы на выставках";
-  if (route.path === "/reviews") return "Отзывы";
-  if (route.path === "/contacts") return "Контакты";
-  if (route.path === "/services-and-prices") return "Услуги";
-  return "Портфолио";
+  if (route.path.startsWith("/portfolio/") || route.path === "/") {
+    return t("rightBar.portfolio");
+  }
+  if (route.path === "/about") return t("rightBar.about");
+  if (route.path === "/how-to-order") return t("rightBar.howToOrder");
+  if (route.path === "/exhibitions") return t("rightBar.exhibitions");
+  if (route.path === "/reviews") return t("rightBar.reviews");
+  if (route.path === "/contacts") return t("rightBar.contacts");
+  if (route.path === "/services-and-prices") return t("rightBar.services");
+  return t("rightBar.portfolio");
 });
+
+function selectLocale(next: AppLocale) {
+  setLocale(next);
+}
 </script>
 
 <template>
   <aside class="the-right-bar">
     <ul class="the-right-bar__lang">
-      <li class="the-right-bar__lang-item is-active">
-        <span>Ru</span>
+      <li
+        v-for="code in locales"
+        :key="code"
+        class="the-right-bar__lang-item"
+        :class="{ 'is-active': locale === code }"
+      >
+        <button
+          type="button"
+          class="the-right-bar__lang-btn"
+          @click="selectLocale(code)"
+        >
+          {{ code === "ru" ? "Ru" : "En" }}
+        </button>
       </li>
     </ul>
     <p class="the-right-bar__hdr">{{ title }}</p>
@@ -46,6 +68,7 @@ const title = computed(() => {
     position: absolute;
     left: 27px;
     top: 34px;
+    z-index: 2;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -63,10 +86,23 @@ const title = computed(() => {
     }
   }
 
+  &__lang-btn {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
+  }
+
   &__hdr {
     position: absolute;
     left: 0;
     top: 50%;
+    z-index: 1;
     margin: 300px 0 0 44px;
     width: 600px;
     font-weight: 700;
@@ -77,6 +113,7 @@ const title = computed(() => {
     transform-origin: 0 0;
     transform: rotate(-90deg);
     white-space: nowrap;
+    pointer-events: none;
   }
 
   @media (max-width: $bp-desktop) {

@@ -1,20 +1,25 @@
 <script lang="ts" setup>
-import { ref, watch, onUnmounted } from "vue";
+import { computed, ref, watch, onUnmounted } from "vue";
+import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
+import { setLocale, type AppLocale } from "../../i18n";
 
 defineOptions({ name: "MobileHeader" });
 
 const route = useRoute();
+const { t, locale } = useI18n();
 const menuOpen = ref(false);
 
-const menuList = [
-  { id: 1, link: "/about", name: "О нас" },
-  { id: 2, link: "/", name: "Портфолио" },
-  { id: 3, link: "/how-to-order", name: "Как сделать заказ?" },
-  { id: 4, link: "/exhibitions", name: "Мы на выставках" },
-  { id: 5, link: "/reviews", name: "Отзывы" },
-  { id: 6, link: "/contacts", name: "Контакты" },
-];
+const locales: AppLocale[] = ["ru", "en"];
+
+const menuList = computed(() => [
+  { id: 1, link: "/about", name: t("nav.about") },
+  { id: 2, link: "/", name: t("nav.portfolio") },
+  { id: 3, link: "/how-to-order", name: t("nav.howToOrder") },
+  { id: 4, link: "/exhibitions", name: t("nav.exhibitions") },
+  { id: 5, link: "/reviews", name: t("nav.reviews") },
+  { id: 6, link: "/contacts", name: t("nav.contacts") },
+]);
 
 function isMenuActive(link: string) {
   if (link === "/") {
@@ -26,6 +31,10 @@ function isMenuActive(link: string) {
 function setMenuOpen(open: boolean) {
   menuOpen.value = open;
   document.body.style.overflow = open ? "hidden" : "";
+}
+
+function selectLocale(next: AppLocale) {
+  setLocale(next);
 }
 
 watch(
@@ -43,21 +52,44 @@ onUnmounted(() => {
 <template>
   <header class="mobile-header">
     <router-link to="/" class="mobile-header__logo-link">
-      <img src="/images/logo.png" alt="Шторы и декор" class="mobile-header__logo" />
+      <img
+        src="/images/logo.png"
+        :alt="t('common.logoAlt')"
+        class="mobile-header__logo"
+      />
     </router-link>
 
-    <button
-      type="button"
-      class="mobile-header__burger"
-      :class="{ 'is-open': menuOpen }"
-      aria-label="Меню"
-      :aria-expanded="menuOpen"
-      @click="setMenuOpen(!menuOpen)"
-    >
-      <span />
-      <span />
-      <span />
-    </button>
+    <div class="mobile-header__actions">
+      <ul class="mobile-header__lang">
+        <li
+          v-for="code in locales"
+          :key="code"
+          class="mobile-header__lang-item"
+          :class="{ 'is-active': locale === code }"
+        >
+          <button
+            type="button"
+            class="mobile-header__lang-btn"
+            @click="selectLocale(code)"
+          >
+            {{ code === "ru" ? "Ru" : "En" }}
+          </button>
+        </li>
+      </ul>
+
+      <button
+        type="button"
+        class="mobile-header__burger"
+        :class="{ 'is-open': menuOpen }"
+        :aria-label="t('common.menu')"
+        :aria-expanded="menuOpen"
+        @click="setMenuOpen(!menuOpen)"
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+    </div>
   </header>
 
   <div
@@ -106,6 +138,41 @@ onUnmounted(() => {
   &__logo {
     display: block;
     width: 72px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__lang {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__lang-item {
+    color: var(--color-muted);
+
+    &.is-active {
+      color: var(--color-navy);
+    }
+  }
+
+  &__lang-btn {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
   }
 
   &__burger {

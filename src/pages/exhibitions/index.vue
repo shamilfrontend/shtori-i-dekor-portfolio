@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import { exhibitions } from "../../data/exhibitions";
+import { useI18n } from "vue-i18n";
+import { useLocaleContent } from "../../composables/useLocaleContent";
 
 defineOptions({ name: "ExhibitionsPage" });
+
+const { t } = useI18n();
+const { exhibitions } = useLocaleContent();
 </script>
 
 <template>
   <div class="exhibitions-page">
-    <h1>Мы на выставках</h1>
+    <h1>{{ t("pages.exhibitions.title") }}</h1>
 
     <div class="exhibitions-page__content">
       <ul class="exhibitions-page__list">
@@ -22,7 +26,7 @@ defineOptions({ name: "ExhibitionsPage" });
       <figure class="exhibitions-page__media">
         <img
           src="/works/areal/01.jpg"
-          alt="Текстильное оформление интерьера — проект конгресс-отель Ареал"
+          :alt="t('pages.exhibitions.imageAlt')"
         />
       </figure>
     </div>

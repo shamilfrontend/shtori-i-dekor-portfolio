@@ -2,6 +2,7 @@
 import TheSidebar from "./components/TheSidebar/index.vue";
 import TheRightBar from "./components/TheRightBar/index.vue";
 import MobileHeader from "./components/MobileHeader/index.vue";
+import CookieConsent from "./components/CookieConsent/index.vue";
 
 defineOptions({ name: "App" });
 </script>
@@ -17,6 +18,8 @@ defineOptions({ name: "App" });
         <router-view />
       </div>
     </div>
+
+    <cookie-consent />
   </div>
 </template>
 

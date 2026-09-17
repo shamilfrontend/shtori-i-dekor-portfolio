@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import { computed, watchEffect } from "vue";
+import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
-import { getPortfolioBySlug } from "../../data/portfolio";
+import { useLocaleContent } from "../../composables/useLocaleContent";
 
 defineOptions({ name: "PortfolioItemPage" });
 
 const route = useRoute();
 const router = useRouter();
+const { t, locale } = useI18n();
+const { getPortfolioBySlug } = useLocaleContent();
 
 const item = computed(() => {
+  void locale.value;
   const slug = String(route.params.slug || "");
   return getPortfolioBySlug(slug);
 });
@@ -18,11 +22,17 @@ watchEffect(() => {
     router.replace("/");
   }
 });
+
+function photoAlt(title: string, n: number) {
+  return t("pages.portfolioItem.photoAlt", { title, n });
+}
 </script>
 
 <template>
   <div v-if="item" class="project-page">
-    <router-link to="/" class="project-page__back-mobile">← Назад</router-link>
+    <router-link to="/" class="project-page__back-mobile">
+      {{ t("common.backArrow") }}
+    </router-link>
 
     <h1 class="project-page__title">{{ item.title }}</h1>
     <p class="project-page__branches">{{ item.roles.join(" / ") }}</p>
@@ -37,7 +47,7 @@ watchEffect(() => {
         {{ item.location }}
       </div>
       <div v-if="item.tasks?.length" class="project-page__meta-action">
-        Решенные задачи
+        {{ t("pages.portfolioItem.solvedTasks") }}
       </div>
     </div>
 
@@ -54,7 +64,7 @@ watchEffect(() => {
         v-for="(src, index) in item.gallery?.length ? item.gallery : [item.image]"
         :key="`${item.id}-${index}`"
         :src="src"
-        :alt="`${item.title} — фото ${index + 1}`"
+        :alt="photoAlt(item.title, index + 1)"
         class="project-page__photo"
       />
     </div>

@@ -8,6 +8,7 @@ import PortfolioItemPage from "./pages/portfolio-item/index.vue";
 import HowToOrderPage from "./pages/how-to-order/index.vue";
 import ExhibitionsPage from "./pages/exhibitions/index.vue";
 import ReviewsPage from "./pages/reviews/index.vue";
+import PrivacyPage from "./pages/privacy/index.vue";
 
 const routes = [
   {
@@ -41,6 +42,10 @@ const routes = [
   {
     path: "/contacts",
     component: ContactsPage,
+  },
+  {
+    path: "/privacy",
+    component: PrivacyPage,
   },
 ];
 

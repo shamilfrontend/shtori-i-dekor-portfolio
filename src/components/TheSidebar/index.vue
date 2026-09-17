@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 import SidebarSocial from "./SidebarSocial/index.vue";
 import SidebarContacts from "./SidebarContacts/index.vue";
@@ -7,16 +8,17 @@ import SidebarContacts from "./SidebarContacts/index.vue";
 defineOptions({ name: "TheSidebar" });
 
 const route = useRoute();
+const { t } = useI18n();
 const isProjectPage = computed(() => route.path.startsWith("/portfolio/"));
 
-const menuList = [
-  { id: 1, link: "/about", name: "О нас" },
-  { id: 2, link: "/", name: "Портфолио" },
-  { id: 3, link: "/how-to-order", name: "Как сделать заказ?" },
-  { id: 4, link: "/exhibitions", name: "Мы на выставках" },
-  { id: 5, link: "/reviews", name: "Отзывы" },
-  { id: 6, link: "/contacts", name: "Контакты" },
-];
+const menuList = computed(() => [
+  { id: 1, link: "/about", name: t("nav.about") },
+  { id: 2, link: "/", name: t("nav.portfolio") },
+  { id: 3, link: "/how-to-order", name: t("nav.howToOrder") },
+  { id: 4, link: "/exhibitions", name: t("nav.exhibitions") },
+  { id: 5, link: "/reviews", name: t("nav.reviews") },
+  { id: 6, link: "/contacts", name: t("nav.contacts") },
+]);
 
 function isMenuActive(link: string) {
   if (link === "/") {
@@ -31,7 +33,7 @@ function isMenuActive(link: string) {
     <router-link to="/" class="the-sidebar__logo-link">
       <img
         src="/images/logo.png"
-        alt="Шторы и декор"
+        :alt="t('common.logoAlt')"
         class="the-sidebar__logo"
       />
     </router-link>
@@ -41,7 +43,7 @@ function isMenuActive(link: string) {
       to="/"
       class="the-sidebar__back"
     >
-      Назад
+      {{ t("common.back") }}
     </router-link>
 
     <nav class="the-sidebar__nav">

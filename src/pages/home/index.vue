@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import PortfolioCard from "../../components/PortfolioCard/index.vue";
-import { portfolioItems } from "../../data/portfolio";
+import { useLocaleContent } from "../../composables/useLocaleContent";
 
 defineOptions({ name: "HomePage" });
+
+const { portfolioItems } = useLocaleContent();
 </script>
 
 <template>

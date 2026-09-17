@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import { services } from "../../data/services";
+import { useI18n } from "vue-i18n";
+import { useLocaleContent } from "../../composables/useLocaleContent";
 
 defineOptions({ name: "ServicesAndPricesPage" });
+
+const { t } = useI18n();
+const { services } = useLocaleContent();
 </script>
 
 <template>
   <div class="services-page">
-    <h1>Услуги и цены</h1>
+    <h1>{{ t("pages.services.title") }}</h1>
 
     <div class="services-page__content">
       <div class="services-page__main">
         <p class="services-page__intro">
-          Ориентировочные цены. Итоговая стоимость рассчитывается после замера и
-          согласования тканей и объёма работ.
+          {{ t("pages.services.intro") }}
         </p>
 
         <ul class="services-page__list">
@@ -29,7 +32,7 @@ defineOptions({ name: "ServicesAndPricesPage" });
       <figure class="services-page__media">
         <img
           src="/works/areal/06.jpg"
-          alt="Шторы в номере люкс — проект конгресс-отель Ареал"
+          :alt="t('pages.services.imageAlt')"
         />
       </figure>
     </div>

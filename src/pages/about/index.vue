@@ -1,35 +1,26 @@
 <script setup lang="ts">
+import { useI18n } from "vue-i18n";
+
 defineOptions({ name: "AboutPage" });
+
+const { t } = useI18n();
 </script>
 
 <template>
   <div class="about-page">
-    <h1>О нас</h1>
+    <h1>{{ t("pages.about.title") }}</h1>
 
     <div class="about-page__content">
       <div class="about-page__text">
-        <p>
-          «Шторы и декор» — мастерская текстильного оформления интерьеров в
-          Балашихе. Мы занимаемся полным циклом: от дизайна и подбора тканей до
-          пошива, монтажа и декора.
-        </p>
-        <p>
-          Работаем с квартирами, загородными домами и общественными пространствами.
-          Среди проектов — панорамные окна небоскрёбов, номера отелей с нестандартной
-          геометрией и уютные семейные интерьеры, где текстиль должен звучать в
-          унисон с росписью и отделкой.
-        </p>
-        <p>
-          Для нас важны точный замер, аккуратный пошив и бережный монтаж. Подбираем
-          ткани с учётом света, стиля и повседневного удобства — чтобы шторы и декор
-          служили долго и радовали каждый день.
-        </p>
+        <p>{{ t("pages.about.p1") }}</p>
+        <p>{{ t("pages.about.p2") }}</p>
+        <p>{{ t("pages.about.p3") }}</p>
       </div>
 
       <figure class="about-page__media">
         <img
           src="/works/river-tower/6.jpg"
-          alt="Шторы и тюль в интерьере с панорамными окнами — проект River Tower"
+          :alt="t('pages.about.imageAlt')"
         />
       </figure>
     </div>
@@ -62,14 +53,14 @@ defineOptions({ name: "AboutPage" });
     max-width: 560px;
 
     p {
-      margin: 0;
+      margin: 0 0 1.2em;
       font-weight: 300;
       font-size: 16px;
       line-height: 1.8;
       color: var(--color-navy);
 
-      &:not(:last-child) {
-        margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

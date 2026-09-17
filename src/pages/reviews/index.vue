@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import { reviews } from "../../data/reviews";
+import { useI18n } from "vue-i18n";
+import { useLocaleContent } from "../../composables/useLocaleContent";
 
 defineOptions({ name: "ReviewsPage" });
+
+const { t } = useI18n();
+const { reviews } = useLocaleContent();
 </script>
 
 <template>
   <div class="reviews-page">
-    <h1>Отзывы</h1>
+    <h1>{{ t("pages.reviews.title") }}</h1>
 
     <div class="reviews-page__content">
       <ul class="reviews-page__list">
@@ -20,7 +24,7 @@ defineOptions({ name: "ReviewsPage" });
       <figure class="reviews-page__media">
         <img
           src="/works/river-tower/1.jpg"
-          alt="Шторы в интерьере с панорамными окнами — проект River Tower"
+          :alt="t('pages.reviews.imageAlt')"
         />
       </figure>
     </div>

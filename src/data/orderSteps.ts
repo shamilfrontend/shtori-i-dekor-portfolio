@@ -1,27 +1,16 @@
-export type OrderStep = {
+export type OrderStepBase = {
+  id: string;
+};
+
+export const orderStepsBase: OrderStepBase[] = [
+  { id: "request" },
+  { id: "measure" },
+  { id: "sketch" },
+  { id: "sewing" },
+  { id: "mounting" },
+];
+
+export type OrderStep = OrderStepBase & {
   title: string;
   text: string;
 };
-
-export const orderSteps: OrderStep[] = [
-  {
-    title: "Заявка",
-    text: "Напишите или позвоните нам — кратко опишите объект, комнаты и пожелания по стилю.",
-  },
-  {
-    title: "Замер",
-    text: "Выезжаем на объект, снимаем размеры окон и обсуждаем варианты тканей и конструкций.",
-  },
-  {
-    title: "Эскиз и ткани",
-    text: "Готовим предложение: эскизы, образцы тканей, фурнитуру и ориентировочную смету.",
-  },
-  {
-    title: "Пошив",
-    text: "После согласования шьём изделия на заказ — с учётом складок, подкладки и декора.",
-  },
-  {
-    title: "Монтаж",
-    text: "Устанавливаем карнизы и готовый текстиль, проверяем посадку и работу механизмов.",
-  },
-];

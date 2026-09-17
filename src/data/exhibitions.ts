@@ -1,34 +1,16 @@
-export type Exhibition = {
+export type ExhibitionBase = {
   id: string;
-  title: string;
   year: string;
+};
+
+export const exhibitionsBase: ExhibitionBase[] = [
+  { id: "mosbuild-2024", year: "2024" },
+  { id: "interior-show-2023", year: "2023" },
+  { id: "balashikha-design-day-2022", year: "2022" },
+];
+
+export type Exhibition = ExhibitionBase & {
+  title: string;
   place: string;
   description: string;
 };
-
-export const exhibitions: Exhibition[] = [
-  {
-    id: "mosbuild-2024",
-    title: "MosBuild",
-    year: "2024",
-    place: "Крокус Экспо, Москва",
-    description:
-      "Представили коллекцию тканей для жилых и общественных интерьеров, образцы моторизованных систем и готовые текстильные решения для окон сложной формы.",
-  },
-  {
-    id: "interior-show-2023",
-    title: "Интерьер + Дизайн",
-    year: "2023",
-    place: "Экспоцентр, Москва",
-    description:
-      "Участвовали в зоне декоративного текстиля: портьеры с ручной складкой, подушки и покрывала в натуральных фактурах, консультации по подбору тканей.",
-  },
-  {
-    id: "balashikha-design-day-2022",
-    title: "День дизайна в Балашихе",
-    year: "2022",
-    place: "Балашиха",
-    description:
-      "Локальная выставка мастерских и дизайнеров интерьера. Показывали работы по пошиву и монтажу, делились опытом оформления квартир и загородных домов.",
-  },
-];

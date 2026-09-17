@@ -1,44 +1,17 @@
-export type Service = {
+export type ServiceBase = {
   id: string;
+};
+
+export const servicesBase: ServiceBase[] = [
+  { id: "design" },
+  { id: "sewing" },
+  { id: "mounting" },
+  { id: "decor" },
+  { id: "motorization" },
+];
+
+export type Service = ServiceBase & {
   title: string;
   description: string;
   priceFrom: string;
 };
-
-export const services: Service[] = [
-  {
-    id: "design",
-    title: "Дизайн текстиля",
-    description:
-      "Эскизы, подбор тканей и фурнитуры под интерьер. Выезд на объект и согласование решений с заказчиком.",
-    priceFrom: "от 5 000 ₽",
-  },
-  {
-    id: "sewing",
-    title: "Пошив штор и декора",
-    description:
-      "Портьеры, тюль, римские и рулонные шторы, покрывала, подушки и саше — по индивидуальным меркам.",
-    priceFrom: "от 3 500 ₽ / м.п.",
-  },
-  {
-    id: "mounting",
-    title: "Монтаж",
-    description:
-      "Установка карнизов, креплений и готовых изделий. Работаем с нестандартными окнами и сложными конфигурациями.",
-    priceFrom: "от 2 500 ₽",
-  },
-  {
-    id: "decor",
-    title: "Декор и аксессуары",
-    description:
-      "Подхваты, ламбрекены, бордюры, декоративные подушки и текстильные акценты в тон интерьера.",
-    priceFrom: "от 1 500 ₽",
-  },
-  {
-    id: "motorization",
-    title: "Моторизация",
-    description:
-      "Электрокарнизы и рулонные системы с управлением пультом или подключением к умному дому.",
-    priceFrom: "от 15 000 ₽",
-  },
-];

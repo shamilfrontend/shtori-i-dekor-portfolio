@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import { orderSteps } from "../../data/orderSteps";
+import { useI18n } from "vue-i18n";
+import { useLocaleContent } from "../../composables/useLocaleContent";
 
 defineOptions({ name: "HowToOrderPage" });
+
+const { t } = useI18n();
+const { orderSteps } = useLocaleContent();
 </script>
 
 <template>
   <div class="how-to-order-page">
-    <h1>Как сделать заказ?</h1>
+    <h1>{{ t("pages.howToOrder.title") }}</h1>
 
     <div class="how-to-order-page__content">
       <div class="how-to-order-page__main">
         <ol class="how-to-order-page__steps">
-          <li v-for="(step, index) in orderSteps" :key="step.title">
+          <li v-for="(step, index) in orderSteps" :key="step.id">
             <span class="how-to-order-page__step-num">{{ index + 1 }}.</span>
             <div>
               <strong>{{ step.title }}</strong>
@@ -21,15 +25,15 @@ defineOptions({ name: "HowToOrderPage" });
         </ol>
 
         <p class="how-to-order-page__cta">
-          Готовы начать?
-          <router-link to="/contacts">Свяжитесь с нами</router-link>
+          {{ t("pages.howToOrder.ctaReady") }}
+          <router-link to="/contacts">{{ t("pages.howToOrder.ctaLink") }}</router-link>
         </p>
       </div>
 
       <figure class="how-to-order-page__media">
         <img
           src="/works/khimki-house/2.jpg"
-          alt="Шторы и тюль в гостиной — проект дом в Химках"
+          :alt="t('pages.howToOrder.imageAlt')"
         />
       </figure>
     </div>

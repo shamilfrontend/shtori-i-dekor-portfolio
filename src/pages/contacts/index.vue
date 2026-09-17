@@ -1,18 +1,25 @@
 <script setup lang="ts">
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
 defineOptions({ name: "ContactsPage" });
 
-const mapSrc =
-  "https://yandex.ru/map-widget/v1/?ll=37.936636%2C55.799765&z=11&pt=37.936636,55.799765,pm2rdm&lang=ru_RU";
+const { t, locale } = useI18n();
+
+const mapSrc = computed(() => {
+  const lang = locale.value === "en" ? "en_US" : "ru_RU";
+  return `https://yandex.ru/map-widget/v1/?ll=37.936636%2C55.799765&z=11&pt=37.936636,55.799765,pm2rdm&lang=${lang}`;
+});
 </script>
 
 <template>
   <div class="contacts-page">
-    <h1>Контакты</h1>
+    <h1>{{ t("pages.contacts.title") }}</h1>
 
     <div class="contacts-page__info">
       <p>
-        МО. г Балашиха<br />
-        ул Советская, д 10а
+        {{ t("pages.contacts.addressLine1") }}<br />
+        {{ t("pages.contacts.addressLine2") }}
       </p>
       <p>
         <a href="mailto:shtori-i-dekor@mail.ru">shtori-i-dekor@mail.ru</a><br />
@@ -23,7 +30,7 @@ const mapSrc =
     <div class="contacts-page__map">
       <iframe
         :src="mapSrc"
-        title="Салон Шторы и Декор на карте — Балашиха, ул. Советская, 10А"
+        :title="t('pages.contacts.mapTitle')"
         loading="lazy"
         allowfullscreen
       />
