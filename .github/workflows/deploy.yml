@@ -15,7 +15,23 @@ jobs:
           cache: npm
 
       - run: npm ci
-      - run: npm run build
+
+      - name: Typecheck
+        run: npx vue-tsc -b
+
+      - name: Build
+        run: |
+          set -o pipefail
+          npx vite build 2>&1 | tee build.log
+
+      - name: Annotate build failure
+        if: failure()
+        run: |
+          if [ -f build.log ]; then
+            tail -n 40 build.log | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+          fi
 
       - name: Setup SSH
         run: |
