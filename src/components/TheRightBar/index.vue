@@ -7,10 +7,13 @@ defineOptions({ name: "TheRightBar" });
 const route = useRoute();
 
 const title = computed(() => {
-  if (route.path.startsWith("/portfolio/")) return "Портфолио";
+  if (route.path.startsWith("/portfolio/") || route.path === "/") return "Портфолио";
   if (route.path === "/about") return "О нас";
-  if (route.path === "/services-and-prices") return "Услуги";
+  if (route.path === "/how-to-order") return "Как сделать заказ?";
+  if (route.path === "/exhibitions") return "Мы на выставках";
+  if (route.path === "/reviews") return "Отзывы";
   if (route.path === "/contacts") return "Контакты";
+  if (route.path === "/services-and-prices") return "Услуги";
   return "Портфолио";
 });
 </script>
@@ -27,6 +30,8 @@ const title = computed(() => {
 </template>
 
 <style lang="scss" scoped>
+@use "../../styles/breakpoints" as *;
+
 .the-right-bar {
   position: fixed;
   right: 0;
@@ -74,7 +79,7 @@ const title = computed(() => {
     white-space: nowrap;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: $bp-desktop) {
     display: none;
   }
 }

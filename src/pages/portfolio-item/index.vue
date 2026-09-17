@@ -62,12 +62,10 @@ watchEffect(() => {
 </template>
 
 <style lang="scss" scoped>
-.project-page {
-  padding: 115px 70px 160px 90px;
+@use "../../styles/mixins" as *;
 
-  @media (max-width: 1200px) {
-    padding: 28px 20px 80px;
-  }
+.project-page {
+  @include page-padding;
 
   &__back-mobile {
     display: none;
@@ -77,20 +75,24 @@ watchEffect(() => {
     font-size: 18px;
     color: var(--color-sand);
 
-    @media (max-width: 1200px) {
+    @media (max-width: $bp-desktop) {
       display: inline-block;
     }
   }
 
   &__title {
     margin: 0 0 12px;
-    font-weight: 700;
     font-size: 40px;
+    font-weight: 700;
     line-height: 1.25;
     color: var(--color-navy);
 
-    @media (max-width: 1200px) {
+    @media (max-width: $bp-desktop) {
       font-size: 28px;
+    }
+
+    @media (max-width: $bp-phone) {
+      font-size: 24px;
     }
   }
 
@@ -124,7 +126,7 @@ watchEffect(() => {
     color: var(--color-navy);
     border-right: 1px solid var(--color-sand);
 
-    @media (max-width: 700px) {
+    @media (max-width: $bp-phone) {
       border-right: 0;
       border-bottom: 1px solid var(--color-sand);
     }
@@ -145,7 +147,13 @@ watchEffect(() => {
     font-weight: 500;
     font-size: 15px;
     color: var(--color-navy);
-    white-space: nowrap;
+
+    @media (max-width: $bp-phone) {
+      flex: 1 1 100%;
+      padding: 16px 20px;
+      white-space: normal;
+      text-align: center;
+    }
   }
 
   &__tasks {
@@ -174,6 +182,10 @@ watchEffect(() => {
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    @media (max-width: $bp-phone) {
+      gap: 20px;
+    }
   }
 
   &__photo {

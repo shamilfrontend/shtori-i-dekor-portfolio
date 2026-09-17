@@ -1,3 +1,5 @@
+@use "./breakpoints" as *;
+
 :root {
   --color-navy: #09364e;
   --color-sand: #e2c1af;
@@ -7,5 +9,7 @@
   --font-main: "Montserrat", sans-serif;
   --sidebar-width: 315px;
   --rightbar-width: 138px;
-  --bp-desktop: 1200px;
+  --bp-desktop: #{$bp-desktop};
+  --bp-phone: #{$bp-phone};
+  --mobile-header-height: 72px;
 }

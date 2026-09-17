@@ -1,32 +1,43 @@
 <script lang="ts" setup>
-import { watch } from "vue";
+import { ref, watch, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
-import PortfolioFilters from "../PortfolioFilters/index.vue";
-import { usePortfolioFilters } from "../../composables/usePortfolioFilters";
 
 defineOptions({ name: "MobileHeader" });
 
 const route = useRoute();
-const {
-  state,
-  setMobileMenuOpen,
-  setMobileFiltersOpen,
-} = usePortfolioFilters();
+const menuOpen = ref(false);
 
 const menuList = [
-  { id: 1, link: "/", name: "Главная" },
-  { id: 2, link: "/about", name: "О нас" },
-  { id: 3, link: "/services-and-prices", name: "Услуги и цены" },
-  { id: 4, link: "/contacts", name: "Контакты" },
+  { id: 1, link: "/about", name: "О нас" },
+  { id: 2, link: "/", name: "Портфолио" },
+  { id: 3, link: "/how-to-order", name: "Как сделать заказ?" },
+  { id: 4, link: "/exhibitions", name: "Мы на выставках" },
+  { id: 5, link: "/reviews", name: "Отзывы" },
+  { id: 6, link: "/contacts", name: "Контакты" },
 ];
+
+function isMenuActive(link: string) {
+  if (link === "/") {
+    return route.path === "/" || route.path.startsWith("/portfolio/");
+  }
+  return route.path.startsWith(link);
+}
+
+function setMenuOpen(open: boolean) {
+  menuOpen.value = open;
+  document.body.style.overflow = open ? "hidden" : "";
+}
 
 watch(
   () => route.fullPath,
   () => {
-    setMobileMenuOpen(false);
-    setMobileFiltersOpen(false);
+    setMenuOpen(false);
   },
 );
+
+onUnmounted(() => {
+  document.body.style.overflow = "";
+});
 </script>
 
 <template>
@@ -35,32 +46,22 @@ watch(
       <img src="/images/logo.png" alt="Шторы и декор" class="mobile-header__logo" />
     </router-link>
 
-    <div class="mobile-header__actions">
-      <button
-        v-if="route.path === '/'"
-        type="button"
-        class="mobile-header__filters-btn"
-        aria-label="Фильтры"
-        @click="setMobileFiltersOpen(!state.mobileFiltersOpen)"
-      >
-        Фильтры
-      </button>
-      <button
-        type="button"
-        class="mobile-header__burger"
-        :class="{ 'is-open': state.mobileMenuOpen }"
-        aria-label="Меню"
-        @click="setMobileMenuOpen(!state.mobileMenuOpen)"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-    </div>
+    <button
+      type="button"
+      class="mobile-header__burger"
+      :class="{ 'is-open': menuOpen }"
+      aria-label="Меню"
+      :aria-expanded="menuOpen"
+      @click="setMenuOpen(!menuOpen)"
+    >
+      <span />
+      <span />
+      <span />
+    </button>
   </header>
 
   <div
-    v-if="state.mobileMenuOpen"
+    v-if="menuOpen"
     class="mobile-drawer"
   >
     <nav>
@@ -69,7 +70,7 @@ watch(
           <router-link
             :to="item.link"
             class="mobile-drawer__link"
-            active-class="is-active"
+            :class="{ 'is-active': isMenuActive(item.link) }"
           >
             {{ item.name }}
           </router-link>
@@ -81,27 +82,23 @@ watch(
       <a href="tel:+79165811715">+7 916 581-17-15</a>
     </div>
   </div>
-
-  <div
-    v-if="state.mobileFiltersOpen"
-    class="mobile-drawer mobile-drawer--filters"
-  >
-    <portfolio-filters compact />
-  </div>
 </template>
 
 <style lang="scss" scoped>
+@use "../../styles/mixins" as *;
+
 .mobile-header {
   display: none;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $bp-desktop) {
     position: sticky;
     top: 0;
     z-index: 200;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 16px;
+    height: var(--mobile-header-height);
+    padding: 0 16px;
     background: var(--color-bg);
     border-bottom: 1px solid rgba(9, 54, 78, 0.08);
   }
@@ -109,23 +106,6 @@ watch(
   &__logo {
     display: block;
     width: 72px;
-  }
-
-  &__actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  &__filters-btn {
-    padding: 8px 12px;
-    border: 1px solid var(--color-navy);
-    border-radius: 2px;
-    background: transparent;
-    font-family: inherit;
-    font-size: 13px;
-    color: var(--color-navy);
-    cursor: pointer;
   }
 
   &__burger {
@@ -173,12 +153,12 @@ watch(
 .mobile-drawer {
   display: none;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $bp-desktop) {
     display: block;
     position: fixed;
     left: 0;
     right: 0;
-    top: 72px;
+    top: var(--mobile-header-height);
     bottom: 0;
     z-index: 190;
     padding: 24px 20px;

@@ -5,6 +5,9 @@ import AboutPage from "./pages/about/index.vue";
 import ServicesPage from "./pages/services-prices/index.vue";
 import ContactsPage from "./pages/contacts/index.vue";
 import PortfolioItemPage from "./pages/portfolio-item/index.vue";
+import HowToOrderPage from "./pages/how-to-order/index.vue";
+import ExhibitionsPage from "./pages/exhibitions/index.vue";
+import ReviewsPage from "./pages/reviews/index.vue";
 
 const routes = [
   {
@@ -18,6 +21,18 @@ const routes = [
   {
     path: "/about",
     component: AboutPage,
+  },
+  {
+    path: "/how-to-order",
+    component: HowToOrderPage,
+  },
+  {
+    path: "/exhibitions",
+    component: ExhibitionsPage,
+  },
+  {
+    path: "/reviews",
+    component: ReviewsPage,
   },
   {
     path: "/services-and-prices",

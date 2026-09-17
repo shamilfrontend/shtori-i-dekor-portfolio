@@ -22,21 +22,28 @@ defineProps<{
 </template>
 
 <style lang="scss" scoped>
+@use "../../styles/breakpoints" as *;
+
 .portfolio-card {
-  display: inline-block;
+  display: block;
   position: relative;
   z-index: 10;
-  margin: 0 10% 84px 0;
-  width: 45%;
-  padding: 45% 0 0;
+  width: 100%;
+  padding: 100% 0 0;
   text-decoration: none;
   color: inherit;
-  vertical-align: top;
   transition: opacity 0.35s, transform 0.35s;
 
-  &:nth-child(2n) {
-    top: 50px;
-    margin-right: 0;
+  @media (min-width: #{$bp-phone + 1}) {
+    &:nth-child(2n) {
+      transform: translateY(50px);
+    }
+  }
+
+  @media (max-width: $bp-desktop) and (min-width: #{$bp-phone + 1}) {
+    &:nth-child(2n) {
+      transform: translateY(24px);
+    }
   }
 
   &__image {
@@ -84,15 +91,7 @@ defineProps<{
       0 5px no-repeat;
   }
 
-  @media (max-width: 1200px) {
-    width: 47%;
-    margin: 0 6% 40px 0;
-
-    &:nth-child(2n) {
-      top: 24px;
-      margin-right: 0;
-    }
-
+  @media (max-width: $bp-desktop) {
     &__name {
       font-size: 18px;
       padding: 18px;
@@ -102,6 +101,21 @@ defineProps<{
       left: 18px;
       bottom: 18px;
       font-size: 12px;
+    }
+  }
+
+  @media (max-width: $bp-phone) {
+    &__name {
+      font-size: 16px;
+      padding: 16px;
+      line-height: 1.4;
+    }
+
+    &__branches {
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      font-size: 11px;
     }
   }
 }

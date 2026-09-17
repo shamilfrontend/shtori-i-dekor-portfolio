@@ -12,17 +12,33 @@ export type PortfolioItem = {
   gallery?: string[];
 };
 
-export const CATEGORIES = [
-  "Гостиная",
-  "Спальня",
-  "Кухня",
-  "Офис",
-  "Детская",
-] as const;
-
-export const ROLES = ["Дизайн", "Пошив", "Монтаж", "Декор"] as const;
-
 export const portfolioItems: PortfolioItem[] = [
+  {
+    id: "river-tower",
+    slug: "river-tower",
+    title: "River Tower",
+    image: "/works/river-tower/6.jpg",
+    categories: ["Гостиная", "Спальня"],
+    roles: ["Дизайн", "Пошив", "Монтаж", "Декор"],
+    location: "Capital Tower / River Tower",
+    description:
+      "Оформление квартиры в элегантном жилом комплексе Capital Tower, небоскребе с панорамными окнами River Tower на 28 этаже. Внутренняя отделка квартиры выполнена в минималистическом стиле, из трехметровых окон башни открываются захватывающие виды на Москва-реку и достопримечательности города. Сочетанием рулонных и мягких струящихся штор в пол, мы сохранили возможность наслаждаться видами из окон. Для удобства все рулонные шторы и карнизы моторизированы и подключены к умному дому. Лёгким движением руки можно управлять шторами. Мягкие и лаконичные покрывала и подушки прекрасно дополнили интерьер.",
+    tasks: [
+      "Сочетание рулонных и мягких струящихся штор в пол",
+      "Моторизация рулонных штор и карнизов, подключение к умному дому",
+      "Покрывала и подушки",
+    ],
+    gallery: [
+      "/works/river-tower/1.jpg",
+      "/works/river-tower/2.jpg",
+      "/works/river-tower/3.jpg",
+      "/works/river-tower/4.jpg",
+      "/works/river-tower/5.jpg",
+      "/works/river-tower/6.jpg",
+      "/works/river-tower/7.jpg",
+      "/works/river-tower/8.jpg",
+    ],
+  },
   {
     id: "areal",
     slug: "areal",

@@ -21,6 +21,8 @@ defineOptions({ name: "App" });
 </template>
 
 <style lang="scss">
+@use "./styles/breakpoints" as *;
+
 * {
   box-sizing: border-box;
 }
@@ -54,11 +56,16 @@ img {
     min-height: 100vh;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: $bp-desktop) {
     margin-left: 0;
     margin-right: 0;
-    background-position: 120% -40px;
-    background-size: auto 900px;
+    background-position: 130% -20px;
+    background-size: auto 700px;
+  }
+
+  @media (max-width: $bp-phone) {
+    background-position: 140% 0;
+    background-size: auto 480px;
   }
 }
 </style>

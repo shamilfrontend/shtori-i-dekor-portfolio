@@ -10,11 +10,20 @@ const route = useRoute();
 const isProjectPage = computed(() => route.path.startsWith("/portfolio/"));
 
 const menuList = [
-  { id: 1, link: "/", name: "Главная" },
-  { id: 2, link: "/about", name: "О нас" },
-  { id: 3, link: "/services-and-prices", name: "Услуги и цены" },
-  { id: 4, link: "/contacts", name: "Контакты" },
+  { id: 1, link: "/about", name: "О нас" },
+  { id: 2, link: "/", name: "Портфолио" },
+  { id: 3, link: "/how-to-order", name: "Как сделать заказ?" },
+  { id: 4, link: "/exhibitions", name: "Мы на выставках" },
+  { id: 5, link: "/reviews", name: "Отзывы" },
+  { id: 6, link: "/contacts", name: "Контакты" },
 ];
+
+function isMenuActive(link: string) {
+  if (link === "/") {
+    return route.path === "/" || route.path.startsWith("/portfolio/");
+  }
+  return route.path.startsWith(link);
+}
 </script>
 
 <template>
@@ -45,12 +54,7 @@ const menuList = [
           <router-link
             :to="item.link"
             class="the-sidebar__link"
-            :class="{
-              'is-active':
-                item.link === '/'
-                  ? route.path === '/'
-                  : route.path.startsWith(item.link),
-            }"
+            :class="{ 'is-active': isMenuActive(item.link) }"
           >
             {{ item.name }}
           </router-link>
@@ -66,6 +70,8 @@ const menuList = [
 </template>
 
 <style lang="scss" scoped>
+@use "../../styles/breakpoints" as *;
+
 .the-sidebar {
   position: fixed;
   left: 0;
@@ -145,7 +151,7 @@ const menuList = [
     padding: 0 24px 0 90px;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: $bp-desktop) {
     display: none;
   }
 }
