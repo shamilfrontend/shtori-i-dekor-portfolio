@@ -3,15 +3,11 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import SidebarSocial from "./SidebarSocial/index.vue";
 import SidebarContacts from "./SidebarContacts/index.vue";
-import PortfolioFilters from "../PortfolioFilters/index.vue";
 
 defineOptions({ name: "TheSidebar" });
 
 const route = useRoute();
 const isProjectPage = computed(() => route.path.startsWith("/portfolio/"));
-const isPortfolioHome = computed(
-  () => route.path === "/" || route.path.startsWith("/portfolio/"),
-);
 
 const menuList = [
   { id: 1, link: "/", name: "Главная" },
@@ -31,14 +27,13 @@ const menuList = [
       />
     </router-link>
 
-    <template v-if="isProjectPage">
-      <router-link to="/" class="the-sidebar__back">Back</router-link>
-    </template>
-    <template v-else-if="isPortfolioHome">
-      <div class="the-sidebar__filters">
-        <portfolio-filters />
-      </div>
-    </template>
+    <router-link
+      v-if="isProjectPage"
+      to="/"
+      class="the-sidebar__back"
+    >
+      Назад
+    </router-link>
 
     <nav class="the-sidebar__nav">
       <ul class="the-sidebar__list">
@@ -116,13 +111,6 @@ const menuList = [
     &:hover {
       color: var(--color-muted);
     }
-  }
-
-  &__filters {
-    margin-top: 48px;
-    padding: 0 31px 0 80px;
-    flex: 1;
-    overflow-y: auto;
   }
 
   &__nav {

@@ -22,7 +22,7 @@ watchEffect(() => {
 
 <template>
   <div v-if="item" class="project-page">
-    <router-link to="/" class="project-page__back-mobile">← Back</router-link>
+    <router-link to="/" class="project-page__back-mobile">← Назад</router-link>
 
     <h1 class="project-page__title">{{ item.title }}</h1>
     <p class="project-page__branches">{{ item.roles.join(" / ") }}</p>
