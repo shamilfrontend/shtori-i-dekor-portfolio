@@ -84,6 +84,21 @@ export default {
     },
   },
   portfolio: {
+    "moscow-apartment": {
+      title: "Apartment in Moscow",
+      categories: ["Living room", "Kitchen", "Study", "Bedroom", "Balcony"],
+      roles: ["Design", "Sewing", "Installation", "Decor"],
+      location: "Moscow",
+      description:
+        "A stylish bright apartment with a beautiful park view from the windows. The kitchen bay window is dressed with Roman blinds for comfortable light control. In the living room, as well as in the study and bedroom — soft folds of lined curtains. All of this is complemented by cushions of varied textures in a restrained color palette. On the balcony, day-night roller blinds in blackout fabric paired with a fine mesh — an ideal solution for brightly lit spaces. For the balcony we also custom-sewed a mattress and cushions in upholstery fabric for a corner sofa.",
+      tasks: [
+        "Roman blinds for the kitchen bay window",
+        "Lined curtains in the living room, study, and bedroom",
+        "Cushions of varied textures in a restrained palette",
+        "Day-night roller blinds in blackout and mesh on the balcony",
+        "Custom mattress and cushions in upholstery fabric for the corner sofa",
+      ],
+    },
     "podmoskovye-apartment": {
       title: "Two-level apartment in the Moscow Region",
       categories: ["Living room", "Bedroom", "Study"],
