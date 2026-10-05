@@ -84,6 +84,21 @@ export default {
     },
   },
   portfolio: {
+    "north-moscow-apartment": {
+      title: "Apartment in northern Moscow",
+      categories: ["Bedroom", "Children's room", "Living room", "Kitchen"],
+      roles: ["Design", "Sewing", "Installation", "Decor"],
+      location: "North Moscow",
+      description:
+        "A spacious apartment in a Stalin-era building. At the entrance a green wall greeted us, and in the textiles we decided to carry that color as a soft trail through all the rooms. In the bedroom, mosaic-pattern curtains were color-matched to the headboard, while the bed runner and cushions picked up the apartment’s bright accent wall. The bedspread is soft, light, and pleasant to the touch. In the children’s room for a boy and a girl we placed desks by the window, so we installed Roman blinds: the sheer one trimmed with pom-pom fringe, and the heavier Roman framed with a sunny-shade ribbon. We used natural cotton fabrics with a subtle geometric pattern. We also made bedspreads in the same design but different shades. In the living room a bright, juicy floral painting hangs on the wall — we could not leave it unnoticed and tied the window treatment to that lovely landscape. The cushions beautifully blend the sofa and curtain tones and are finished with a border. In the kitchen, sheer fabric with a large botanical print is gathered into a stylish braided tieback. On the sashes we mounted natural-texture pleated blinds. The pleated blinds are easy to operate, sit compactly on the sashes, and leave the wide windowsill free for a vase of fruit.",
+      tasks: [
+        "Mosaic-pattern curtains, bed runner, and cushions in the bedroom",
+        "Roman blinds with pom-poms and sunny ribbon in the children’s room",
+        "Bedspreads in one design, different shades",
+        "Living-room window décor matched to the floral painting",
+        "Sheer with braided tieback and pleated blinds on kitchen sashes",
+      ],
+    },
     "moscow-apartment": {
       title: "Apartment in Moscow",
       categories: ["Living room", "Kitchen", "Study", "Bedroom", "Balcony"],
