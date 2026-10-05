@@ -32,16 +32,67 @@ export default {
   pages: {
     about: {
       title: "About",
-      p1: "“Curtains & Decor” is a textile interior studio in Balashikha. We handle the full cycle: from design and fabric selection to sewing, installation, and décor.",
-      p2: "We work with apartments, country homes, and public spaces. Our projects include panoramic skyscraper windows, hotel suites with unusual geometry, and cozy family interiors where textiles should resonate with murals and finishes.",
-      p3: "We value precise measuring, careful sewing, and gentle installation. We choose fabrics with light, style, and everyday comfort in mind — so curtains and décor last and delight every day.",
+      intro1:
+        "My name is Olga Efremova. I am the founder and lead designer of the textile and interior design studio “Curtains & Decor”.",
+      intro2:
+        "I am a member of the Union of Textile Designers and Decorators, with training as a master embroidery artist and costume designer, as well as extensive knowledge of textile interior design. My experience includes Heimtextil Russia, Moscow Interior and Design Week at Manege, the “Podium” project at Homefest, and conferences for designers.",
+      textile1:
+        "Textiles in the home are more than decorative accents — they are essential to a cozy, functional atmosphere. They shape the interior’s style, bringing warmth, colour, and texture, and making the space feel more alive and comfortable.",
+      textile2:
+        "Textiles give a home its individuality. They reflect the owners’ character and preferences and tell their own story.",
+      servicesTitle:
+        "Our studio offers a wide range of textile design services for interiors and exteriors:",
+      services: [
+        "Curtains",
+        "Decorative and motorized curtain rods",
+        "Blinds and plissé",
+        "Roman and roller blinds",
+        "Bedspreads and cushions",
+        "Tablecloths and napkins",
+        "Bedding",
+        "Furniture covers",
+        "Headboards",
+        "Ottomans",
+        "Lampshades",
+      ],
+      servicesMore: "and other textile décor elements",
+      fullCycle:
+        "We accompany each project from concept and measuring through installation and hanging curtains, providing a full-cycle service.",
+      whyTitle: "Why choose us?",
+      whyText:
+        "We offer a vast range of fabrics and accessories, so we can find the right solution for any interior. Our studio works closely with interior designers and architects to bring bold ideas to life and plan textile décor at the project stage — helping avoid mistakes in window dressing.",
+      invite:
+        "If you are looking for unique textile solutions for your space, we would be glad to discuss your ideas and offer professional help.",
+      contactTitle: "How to reach us",
+      phoneLabel: "Phone",
+      phoneDisplay: "+7 916 581-17-15",
+      whatsapp: "WhatsApp",
+      instagram: "Instagram",
+      vk: "VK",
+      telegram: "Telegram",
+      max: "Max",
+      address:
+        "Balashikha, 10A Sovetskaya St., Pyramid shopping center, “Curtains & Decor”",
+      addressInvite: "We look forward to welcoming you at our studio:",
       imageAlt:
         "Curtains and sheer in an interior with panoramic windows — River Tower project",
     },
     howToOrder: {
       title: "How to order?",
-      ctaReady: "Ready to start?",
-      ctaLink: "Contact us",
+      intro:
+        "To place or estimate an order, write to us in direct messages in any messenger that is convenient for you:",
+      writeLink: "Write to us",
+      requirementsTitle: "To estimate the cost, please send:",
+      requirements: [
+        "A photo or video of your interior.",
+        "The project (if you have one)",
+        "Ceiling height, window dimensions, and the track width if a curtain track is already installed.",
+        "Your fabric preferences — colour, texture, density, and so on.",
+      ],
+      closing:
+        "We will prepare a preliminary estimate and set a date and time for a designer to visit your site, or arrange a meeting at our studio.",
+      signature: "With respect, the “Curtains & Decor” team",
+      channel: "t.me/shtori_i_dekor_ru",
       imageAlt: "Curtains and sheer in a living room — Khimki house project",
     },
     exhibitions: {
@@ -62,8 +113,15 @@ export default {
     },
     contacts: {
       title: "Contacts",
-      addressLine1: "Balashikha, Moscow Region",
-      addressLine2: "10A Sovetskaya St.",
+      addressLine1: "Balashikha, 10A Sovetskaya St.",
+      addressLine2: "Pyramid shopping center, “Curtains & Decor”",
+      phoneLabel: "Phone",
+      emailLabel: "Email",
+      whatsapp: "WhatsApp",
+      instagram: "Instagram",
+      vk: "VK",
+      telegram: "Telegram",
+      max: "Max",
       mapTitle:
         "Curtains & Decor salon on the map — Balashikha, 10A Sovetskaya St.",
     },
@@ -84,6 +142,20 @@ export default {
     },
   },
   portfolio: {
+    "podmoskovye-house": {
+      title:
+        "Living room and staircase décor in a country house in the Moscow Region",
+      categories: ["Living room", "Kitchen", "Staircase"],
+      roles: ["Design", "Sewing", "Installation", "Decor"],
+      location: "Moscow Region",
+      description:
+        "The house called for a festive mood. The Roman blind on the staircase turned out bright, rich, and painterly. Its hem is finished with barrel-shaped décor in golden tones. In the kitchen zone there is a double Roman blind, and in the dining and living rooms — floor-length drapes and sheers. An ideal pairing of fabric with a floral pattern reminiscent of a flower meadow and a plain, softly flowing texture in a delicate mint shade. At the join of the two fabrics sits stylish fringe with fine lines of a leafy ornament. The soft textiles fit the house interior beautifully.",
+      tasks: [
+        "Staircase Roman blind finished with golden barrel décor",
+        "Double Roman blind in the kitchen",
+        "Floor-length drapes and sheers: floral pattern and mint fabric with fringe",
+      ],
+    },
     "pushkino-house": {
       title: "Country house in Pushkino",
       categories: ["Living room", "Kitchen"],
@@ -166,6 +238,21 @@ export default {
         "Curtain sets for the bedroom",
         "Cushions and bed runner",
         "Custom track brackets for triangular windows",
+      ],
+    },
+    "areal-spa": {
+      title: "Spa zone décor at Congress Hotel Areal",
+      categories: ["Spa zone"],
+      roles: ["Design", "Sewing", "Installation", "Decor"],
+      location: "Congress Hotel Areal",
+      description:
+        "The complex window structure set its own rules, but we created a soft, flowing window treatment. The curtain tracks were made to our drawings. The pleats were laid by hand. Soft cushions for sofas and chairs, as well as soft mattress pads on the windowsill, were made from durable upholstery fabric.",
+      tasks: [
+        "Soft treatment for a complex window",
+        "Custom curtain tracks from our drawings",
+        "Hand-laid pleats",
+        "Cushions for sofas and chairs",
+        "Windowsill mattress pads in durable upholstery fabric",
       ],
     },
     "khimki-house": {
@@ -261,28 +348,6 @@ export default {
       place: "Balashikha",
       description:
         "A local exhibition of workshops and interior designers. We showed sewing and installation work and shared experience furnishing apartments and country homes.",
-    },
-  },
-  orderSteps: {
-    request: {
-      title: "Inquiry",
-      text: "Write or call us — briefly describe the space, rooms, and style preferences.",
-    },
-    measure: {
-      title: "Measuring",
-      text: "We visit the site, take window measurements, and discuss fabric and construction options.",
-    },
-    sketch: {
-      title: "Sketch & fabrics",
-      text: "We prepare a proposal: sketches, fabric samples, hardware, and an approximate estimate.",
-    },
-    sewing: {
-      title: "Sewing",
-      text: "After approval we sew custom pieces — with pleats, lining, and décor as needed.",
-    },
-    mounting: {
-      title: "Installation",
-      text: "We install tracks and finished textiles, check the fit and how mechanisms work.",
     },
   },
 } as const;

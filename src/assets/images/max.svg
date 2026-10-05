@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Max">
+  <defs>
+    <linearGradient id="maxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4B6BFB"/>
+      <stop offset="100%" stop-color="#7B5CFF"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="256" fill="url(#maxGrad)"/>
+  <path fill="#FFFFFF" d="M156 168h52l48 112 48-112h52v176h-44V248l-44 96h-36l-44-96v96h-44V168z"/>
+</svg>

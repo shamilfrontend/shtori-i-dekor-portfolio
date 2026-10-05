@@ -1,12 +1,15 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { useI18n } from "vue-i18n";
-import { useLocaleContent } from "../../composables/useLocaleContent";
 import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "HowToOrderPage" });
 
-const { t } = useI18n();
-const { orderSteps } = useLocaleContent();
+const { t, tm } = useI18n();
+
+const requirements = computed(
+  () => tm("pages.howToOrder.requirements") as string[],
+);
 </script>
 
 <template>
@@ -15,19 +18,41 @@ const { orderSteps } = useLocaleContent();
 
     <div class="how-to-order-page__content">
       <div class="how-to-order-page__main">
-        <ol class="how-to-order-page__steps">
-          <li v-for="(step, index) in orderSteps" :key="step.id">
-            <span class="how-to-order-page__step-num">{{ index + 1 }}.</span>
-            <div>
-              <strong>{{ step.title }}</strong>
-              <p>{{ step.text }}</p>
-            </div>
-          </li>
-        </ol>
+        <p>{{ t("pages.howToOrder.intro") }}</p>
 
-        <p class="how-to-order-page__cta">
-          {{ t("pages.howToOrder.ctaReady") }}
-          <router-link to="/contacts">{{ t("pages.howToOrder.ctaLink") }}</router-link>
+        <p>
+          <a
+            href="https://t.me/Olga_Efremova_shtoriidekor"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@Olga_Efremova_shtoriidekor</a
+          >
+        </p>
+
+        <p>
+          <a
+            href="https://t.me/Olga_Efremova_shtoriidekor"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ t("pages.howToOrder.writeLink") }}</a
+          >
+        </p>
+
+        <h2>{{ t("pages.howToOrder.requirementsTitle") }}</h2>
+        <ul class="how-to-order-page__requirements">
+          <li v-for="(item, index) in requirements" :key="index">{{ item }}</li>
+        </ul>
+
+        <p>{{ t("pages.howToOrder.closing") }}</p>
+        <p>{{ t("pages.howToOrder.signature") }}</p>
+
+        <p>
+          <a
+            href="https://t.me/shtori_i_dekor_ru"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ t("pages.howToOrder.channel") }}</a
+          >
         </p>
       </div>
 
@@ -65,55 +90,26 @@ const { orderSteps } = useLocaleContent();
 
   &__main {
     max-width: 560px;
-  }
-
-  &__steps {
-    margin: 0 0 40px;
-    padding: 0;
-    list-style: none;
-
-    li {
-      display: flex;
-      gap: 12px;
-      margin: 0;
-
-      &:not(:last-child) {
-        margin-bottom: 24px;
-      }
-    }
-
-    strong {
-      display: block;
-      margin-bottom: 4px;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 1.5;
-      color: var(--color-navy);
-    }
 
     p {
-      margin: 0;
+      margin: 0 0 1.2em;
       font-weight: 300;
       font-size: 16px;
       line-height: 1.8;
       color: var(--color-navy);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-  }
 
-  &__step-num {
-    flex-shrink: 0;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--color-navy);
-  }
-
-  &__cta {
-    margin: 0;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--color-navy);
+    h2 {
+      margin: 0 0 0.8em;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--color-navy);
+    }
 
     a {
       color: var(--color-navy);
@@ -123,6 +119,20 @@ const { orderSteps } = useLocaleContent();
       &:hover {
         color: var(--color-muted);
       }
+    }
+  }
+
+  &__requirements {
+    margin: 0 0 1.2em;
+    padding: 0 0 0 1.2em;
+    list-style: disc;
+    color: var(--color-navy);
+
+    li {
+      margin: 0 0 0.35em;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8;
     }
   }
 

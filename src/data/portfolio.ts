@@ -19,6 +19,24 @@ export type PortfolioItem = PortfolioItemBase & {
 
 export const portfolioItemsBase: PortfolioItemBase[] = [
   {
+    id: "podmoskovye-house",
+    slug: "podmoskovye-house",
+    image: withBase("/works/podmoskovye-house/3.jpg"),
+    gallery: [
+      withBase("/works/podmoskovye-house/1.jpg"),
+      withBase("/works/podmoskovye-house/2.jpg"),
+      withBase("/works/podmoskovye-house/3.jpg"),
+      withBase("/works/podmoskovye-house/4.jpg"),
+      withBase("/works/podmoskovye-house/5.jpg"),
+      withBase("/works/podmoskovye-house/6.jpg"),
+      withBase("/works/podmoskovye-house/7.jpg"),
+      withBase("/works/podmoskovye-house/8.jpg"),
+      withBase("/works/podmoskovye-house/9.jpg"),
+      withBase("/works/podmoskovye-house/10.jpg"),
+      withBase("/works/podmoskovye-house/11.jpg"),
+    ],
+  },
+  {
     id: "pushkino-house",
     slug: "pushkino-house",
     image: withBase("/works/pushkino-house/7.jpg"),
@@ -118,6 +136,20 @@ export const portfolioItemsBase: PortfolioItemBase[] = [
       withBase("/works/areal/05.jpg"),
       withBase("/works/areal/10.jpg"),
       withBase("/works/areal/08.jpg"),
+    ],
+  },
+  {
+    id: "areal-spa",
+    slug: "areal-spa",
+    image: withBase("/works/areal-spa/4.jpg"),
+    gallery: [
+      withBase("/works/areal-spa/4.jpg"),
+      withBase("/works/areal-spa/1.jpg"),
+      withBase("/works/areal-spa/3.jpg"),
+      withBase("/works/areal-spa/7.jpg"),
+      withBase("/works/areal-spa/2.jpg"),
+      withBase("/works/areal-spa/5.jpg"),
+      withBase("/works/areal-spa/6.jpg"),
     ],
   },
   {

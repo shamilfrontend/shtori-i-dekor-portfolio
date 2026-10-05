@@ -20,6 +20,20 @@ defineOptions({ name: "SidebarSocial" });
     </li>
     <li class="sidebar-social__item">
       <a
+        href="https://max.ru/join/hllGueLGcq2vW2BGf3WafDBdVD0mulUTKEsi-0aNnFI"
+        class="sidebar-social__link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="../../../assets/images/max.svg"
+          alt="Max"
+          class="sidebar-social__icon"
+        />
+      </a>
+    </li>
+    <li class="sidebar-social__item">
+      <a
         href="https://api.whatsapp.com/send/?phone=79165811715"
         class="sidebar-social__link"
         target="_blank"

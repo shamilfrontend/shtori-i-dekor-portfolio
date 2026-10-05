@@ -8,7 +8,6 @@ import {
 import { servicesBase, type Service } from "../data/services";
 import { reviewsBase, type Review } from "../data/reviews";
 import { exhibitionsBase, type Exhibition } from "../data/exhibitions";
-import { orderStepsBase, type OrderStep } from "../data/orderSteps";
 
 function asStringArray(value: unknown): string[] {
   if (Array.isArray(value)) {
@@ -93,24 +92,11 @@ export function useLocaleContent() {
     });
   });
 
-  const orderSteps = computed<OrderStep[]>(() => {
-    void locale.value;
-    return orderStepsBase.map((base) => {
-      const msg = tm(`orderSteps.${base.id}`) as Record<string, unknown>;
-      return {
-        ...base,
-        title: String(msg.title ?? ""),
-        text: String(msg.text ?? ""),
-      };
-    });
-  });
-
   return {
     portfolioItems,
     getPortfolioBySlug,
     services,
     reviews,
     exhibitions,
-    orderSteps,
   };
 }
