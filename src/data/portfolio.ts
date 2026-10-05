@@ -19,6 +19,21 @@ export type PortfolioItem = PortfolioItemBase & {
 
 export const portfolioItemsBase: PortfolioItemBase[] = [
   {
+    id: "pushkino-house",
+    slug: "pushkino-house",
+    image: withBase("/works/pushkino-house/7.jpg"),
+    gallery: [
+      withBase("/works/pushkino-house/1.jpg"),
+      withBase("/works/pushkino-house/2.jpg"),
+      withBase("/works/pushkino-house/3.jpg"),
+      withBase("/works/pushkino-house/4.jpg"),
+      withBase("/works/pushkino-house/5.jpg"),
+      withBase("/works/pushkino-house/6.jpg"),
+      withBase("/works/pushkino-house/7.jpg"),
+      withBase("/works/pushkino-house/8.jpg"),
+    ],
+  },
+  {
     id: "north-moscow-apartment",
     slug: "north-moscow-apartment",
     image: withBase("/works/north-moscow-apartment/2.jpg"),

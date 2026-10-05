@@ -84,6 +84,19 @@ export default {
     },
   },
   portfolio: {
+    "pushkino-house": {
+      title: "Country house in Pushkino",
+      categories: ["Living room", "Kitchen"],
+      roles: ["Design", "Sewing", "Installation", "Decor"],
+      location: "Pushkino",
+      description:
+        "Textile décor for the kitchen-dining and living areas in a country house in Pushkino. Soft flowing fabrics with a light textured sheen. Light refinement and functionality. All tracks are motorized, and the curtains are easily controlled via a smart home. A Roman blind with delicate dragonfly embroidery.",
+      tasks: [
+        "Drapes in soft flowing fabrics with a textured sheen",
+        "Electric tracks connected to a smart home",
+        "Roman blind with dragonfly embroidery",
+      ],
+    },
     "north-moscow-apartment": {
       title: "Apartment in northern Moscow",
       categories: ["Bedroom", "Children's room", "Living room", "Kitchen"],
