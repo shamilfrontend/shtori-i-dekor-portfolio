@@ -19,6 +19,20 @@ export type PortfolioItem = PortfolioItemBase & {
 
 export const portfolioItemsBase: PortfolioItemBase[] = [
   {
+    id: "podmoskovye-apartment",
+    slug: "podmoskovye-apartment",
+    image: withBase("/works/podmoskovye-apartment/1.jpg"),
+    gallery: [
+      withBase("/works/podmoskovye-apartment/1.jpg"),
+      withBase("/works/podmoskovye-apartment/2.jpg"),
+      withBase("/works/podmoskovye-apartment/3.jpg"),
+      withBase("/works/podmoskovye-apartment/4.jpg"),
+      withBase("/works/podmoskovye-apartment/5.jpg"),
+      withBase("/works/podmoskovye-apartment/6.jpg"),
+      withBase("/works/podmoskovye-apartment/7.jpg"),
+    ],
+  },
+  {
     id: "river-tower",
     slug: "river-tower",
     image: withBase("/works/river-tower/6.jpg"),

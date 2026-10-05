@@ -84,6 +84,20 @@ export default {
     },
   },
   portfolio: {
+    "podmoskovye-apartment": {
+      title: "Two-level apartment in the Moscow Region",
+      categories: ["Living room", "Bedroom", "Study"],
+      roles: ["Design", "Sewing", "Installation", "Decor"],
+      location: "Moscow Region",
+      description:
+        "The apartment is in a new residential complex in the Moscow Region, with a scenic view of a pine forest from the windows. The colors of nature fit naturally into the interior. We dressed the windows with minimalist Roman blinds mounted on the sashes, keeping the windowsills clear so you can sit on a soft cushion, enjoy the view with a cup of fragrant tea or a favorite book. All Roman blinds are finished with décor, and the lift systems were made to match the frame color. In the bedroom we added soft velvet curtains for a warmer, more comfortable feel. The curtains hang on grommets from black faux-forged rods.",
+      tasks: [
+        "Roman blinds mounted on window sashes",
+        "Roman blind décor and lift systems matched to the frames",
+        "Velvet curtains on grommets in the bedroom",
+        "Black faux-forged curtain rods",
+      ],
+    },
     "river-tower": {
       title: "River Tower",
       categories: ["Living room", "Bedroom"],
