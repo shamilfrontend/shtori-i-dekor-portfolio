@@ -15,25 +15,17 @@ Vue 3 + TypeScript + Vite.
 | Тест (GitHub Pages) | https://shamilfrontend.github.io/shtori-i-dekor-portfolio/ |
 | Прод (Beget) | https://shtori-i-dekor.ru |
 
-### Pipeline (Actions → **Deploy**)
+### Pipeline
 
-При push в `main` (или вручную через Actions → **Deploy**) запускается один workflow с тремя этапами:
+**Deploy** (push в `main` или Actions → **Deploy** → Run workflow):
 
 1. **build** — typecheck и сборка с `BASE_PATH=/shtori-i-dekor-portfolio/` для Pages  
-2. **Deploy test** — публикация на GitHub Pages (автоматически)  
-3. **Deploy prod** — сборка без `BASE_PATH` и выкладка на Beget по SSH; ждёт ручного Approve
+2. **Deploy test** — публикация на GitHub Pages
+
+**Deploy prod** — только вручную: Actions → **Deploy prod** → **Run workflow**.  
+Сборка без `BASE_PATH` и выкладка на Beget по SSH. На push в `main` prod не запускается.
 
 В Settings → Pages выберите Source: **GitHub Actions**.
-
-#### Ручной Approve для prod
-
-Без защиты environment третий job задеплоит prod на каждый push. Настройте один раз:
-
-1. Settings → Environments → создать **production** (если ещё нет)
-2. **Required reviewers** — добавить себя (или другого ревьюера)
-3. Сохранить
-
-После успешного Deploy test job **Deploy prod** будет в статусе Waiting: в прогоне workflow нажмите **Review deployments** → Approve.
 
 #### Секреты для Beget
 
