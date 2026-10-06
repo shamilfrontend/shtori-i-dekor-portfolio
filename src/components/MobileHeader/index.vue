@@ -138,7 +138,7 @@ onUnmounted(() => {
 
   &__logo {
     display: block;
-    width: 72px;
+    width: 120px;
   }
 
   &__actions {

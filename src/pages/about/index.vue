@@ -101,7 +101,7 @@ const services = computed(() => tm("pages.about.services") as string[]);
 
       <figure class="about-page__media">
         <img
-          :src="withBase('/works/river-tower/6.jpg')"
+          :src="withBase('/images/team.jpg')"
           :alt="t('pages.about.imageAlt')"
         />
       </figure>
@@ -129,10 +129,21 @@ const services = computed(() => tm("pages.about.services") as string[]);
       grid-template-columns: 1fr;
       gap: 32px;
     }
+
+    @media (max-width: $bp-phone) {
+      .about-page__media {
+        order: -1;
+      }
+    }
   }
 
   &__text {
     max-width: 560px;
+
+    @media (max-width: $bp-desktop) {
+      max-width: none;
+      width: 100%;
+    }
 
     p {
       margin: 0 0 1.2em;
@@ -225,7 +236,7 @@ const services = computed(() => tm("pages.about.services") as string[]);
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 3 / 2;
       object-fit: cover;
     }
   }

@@ -101,7 +101,7 @@ function isMenuActive(link: string) {
 
   &__logo {
     display: block;
-    width: 150px;
+    width: 200px;
   }
 
   &__back {

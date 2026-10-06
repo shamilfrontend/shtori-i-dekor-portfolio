@@ -74,8 +74,7 @@ export default {
       address:
         "Balashikha, 10A Sovetskaya St., Pyramid shopping center, “Curtains & Decor”",
       addressInvite: "We look forward to welcoming you at our studio:",
-      imageAlt:
-        "Curtains and sheer in an interior with panoramic windows — River Tower project",
+      imageAlt: "Curtains & Decor studio team in the showroom",
     },
     howToOrder: {
       title: "How to order?",
