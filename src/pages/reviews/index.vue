@@ -14,13 +14,24 @@ const { reviews } = useLocaleContent();
     <h1>{{ t("pages.reviews.title") }}</h1>
 
     <div class="reviews-page__content">
-      <ul class="reviews-page__list">
-        <li v-for="review in reviews" :key="review.id">
-          <p class="reviews-page__name">{{ review.name }}</p>
-          <p class="reviews-page__meta">{{ review.meta }}</p>
-          <p class="reviews-page__text">{{ review.text }}</p>
-        </li>
-      </ul>
+      <div class="reviews-page__list-wrap">
+        <ul class="reviews-page__list">
+          <li v-for="review in reviews" :key="review.id">
+            <p class="reviews-page__name">{{ review.name }}</p>
+            <p class="reviews-page__meta">{{ review.meta }}</p>
+            <p class="reviews-page__text">{{ review.text }}</p>
+          </li>
+        </ul>
+
+        <a
+          class="reviews-page__all-link"
+          href="https://yandex.ru/maps/org/shtory_i_dekor/110361871224/reviews/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ t("pages.reviews.viewAll") }}
+        </a>
+      </div>
 
       <figure class="reviews-page__media">
         <img
@@ -54,8 +65,11 @@ const { reviews } = useLocaleContent();
     }
   }
 
-  &__list {
+  &__list-wrap {
     max-width: 560px;
+  }
+
+  &__list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -66,6 +80,22 @@ const { reviews } = useLocaleContent();
       &:not(:last-child) {
         margin-bottom: 40px;
       }
+    }
+  }
+
+  &__all-link {
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-navy);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-muted);
     }
   }
 

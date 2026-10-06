@@ -102,6 +102,7 @@ export default {
       title: "Reviews",
       imageAlt:
         "Curtains in an interior with panoramic windows — River Tower project",
+      viewAll: "View all reviews",
     },
     services: {
       title: "Services & prices",
@@ -303,29 +304,29 @@ export default {
   },
   reviews: {
     "1": {
-      name: "Elena M.",
-      meta: "River Tower, Moscow",
-      text: "We ordered curtains for panoramic windows on the 28th floor. The team chose light fabrics that don’t block the river view, and motorization integrated perfectly with the smart home. Careful installation, deadlines met.",
+      name: "Tatyana",
+      meta: "August 1, 2025 · Yandex Maps",
+      text: "Thank you so much for the pleasure delivered: knowing that this marvel of design and sewing is ours is priceless! The designer who suggested this model, the golden hands of the seamstresses who created this quality piece, and the wonderful owner Olga — thank you all!!! Done to a high standard and on schedule per the contract, carefully delivered and installed by master fitter Vasiliy! From the heart I recommend the Curtains & Decor workshop-salon in Balashikha!",
     },
     "2": {
-      name: "Andrey K.",
-      meta: "Congress Hotel Areal",
-      text: "We furnished a luxury suite with non-standard triangular windows. Tracks made to drawings, flame-retardant fabrics — everything the site required. Guests notice the coziness and textile quality.",
+      name: "M",
+      meta: "December 30, 2024 · Yandex Maps",
+      text: "We want to thank the staff of this salon. Very happy with their work: communication, the variety of fabrics, the designer’s work, and the installation. Happy to recommend! It’s great that companies like this exist. We plan to come back again.",
     },
     "3": {
-      name: "Maria S.",
-      meta: "House in Khimki",
-      text: "We needed curtains that tie in with the wall murals. Natural-fiber fabrics, cushions, and borders — the interior came together as one composition. Very happy with the result.",
+      name: "Olesya Sherstobitova",
+      meta: "December 26, 2024 · Yandex Maps",
+      text: "Words of gratitude to Olga and the team for the wonderful work and beauty they bring!!! Skilled, knowledgeable craftspeople who always advise, explain, and consult. Not our first blinds and curtains as a family — we’ve worked with them for 5 years!!! Special thanks to installer Vasiliy — precise, fast, and even. Wishing you even greater success in the year ahead!!! See you soon!",
     },
     "4": {
-      name: "Olga V.",
-      meta: "Apartment, Balashikha",
-      text: "From measuring to installation took two weeks. They helped choose drapes and sheer to match the walls and made matching bedspreads. Attentive work, always in touch.",
+      name: "Yulia",
+      meta: "September 13, 2024 · Yandex Maps",
+      text: "I want to note the high skill of the staff, the quality and speed of work. I ordered fabric hemming. Everything was done very neatly and quickly!!! They advised how best to do it and consulted thoroughly. I will definitely come back!",
     },
     "5": {
-      name: "Dmitry P.",
-      meta: "Office, Mytishchi",
-      text: "We needed roller blinds for meeting rooms. Several light-control options were offered; installed quickly and dust-free. Recommended.",
+      name: "Olga",
+      meta: "July 16, 2024 · Yandex Maps",
+      text: "Excellent curtain salon. Designer Ekaterina is wonderful — special thanks to her for suggesting beautiful curtains and the right colour palette; the room was transformed! I recommend this salon to everyone — fast and high-quality work! Special thanks to fitter Vasiliy and the seamstress for top-level quality!!! Everything done well and on time!",
     },
   },
   exhibitions: {
