@@ -13,7 +13,7 @@ defineOptions({ name: "SidebarSocial" });
       >
         <img
           src="../../../assets/images/telegram.svg"
-          alt="telegram"
+          alt="Telegram"
           class="sidebar-social__icon"
         />
       </a>
@@ -41,7 +41,7 @@ defineOptions({ name: "SidebarSocial" });
       >
         <img
           src="../../../assets/images/whatsapp.svg"
-          alt="whatsapp"
+          alt="WhatsApp"
           class="sidebar-social__icon"
         />
       </a>
@@ -55,7 +55,7 @@ defineOptions({ name: "SidebarSocial" });
       >
         <img
           src="../../../assets/images/instagram.svg"
-          alt="instagram"
+          alt="Instagram"
           class="sidebar-social__icon"
         />
       </a>
