@@ -33,7 +33,7 @@ const mapSrc = computed(() => {
         <li>
           <span>{{ t("pages.contacts.whatsapp") }}:</span>
           <a
-            href="https://api.whatsapp.com/send?phone=79165811715"
+            href="https://wa.me/79165811715"
             target="_blank"
             rel="noopener noreferrer"
             >+7 916 581-17-15</a
@@ -60,16 +60,16 @@ const mapSrc = computed(() => {
         <li>
           <span>{{ t("pages.contacts.telegram") }}:</span>
           <a
-            href="https://t.me/shtori_i_dekor_ru"
+            href="https://t.me/Olga_Efremova_shtoriidekor"
             target="_blank"
             rel="noopener noreferrer"
-            >t.me/shtori_i_dekor_ru</a
+            >t.me/Olga_Efremova_shtoriidekor</a
           >
         </li>
         <li>
           <span>{{ t("pages.contacts.max") }}:</span>
           <a
-            href="https://max.ru/join/hllGueLGcq2vW2BGf3WafDBdVD0mulUTKEsi-0aNnFI"
+            href="https://max.ru/u/f9LHodD0cOIJxiQQg_DRb1p0udKpjqLkF29_qe5Qf0orTnjOJSakoy9Hitc"
             target="_blank"
             rel="noopener noreferrer"
             >max.ru</a

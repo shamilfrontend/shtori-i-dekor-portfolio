@@ -6,7 +6,7 @@ defineOptions({ name: "SidebarSocial" });
   <ul class="sidebar-social">
     <li class="sidebar-social__item">
       <a
-        href="https://t.me/shtori_i_dekor_ru"
+        href="https://t.me/Olga_Efremova_shtoriidekor"
         class="sidebar-social__link"
         target="_blank"
         rel="noopener noreferrer"
@@ -20,7 +20,7 @@ defineOptions({ name: "SidebarSocial" });
     </li>
     <li class="sidebar-social__item">
       <a
-        href="https://max.ru/join/hllGueLGcq2vW2BGf3WafDBdVD0mulUTKEsi-0aNnFI"
+        href="https://max.ru/u/f9LHodD0cOIJxiQQg_DRb1p0udKpjqLkF29_qe5Qf0orTnjOJSakoy9Hitc"
         class="sidebar-social__link"
         target="_blank"
         rel="noopener noreferrer"
@@ -34,7 +34,7 @@ defineOptions({ name: "SidebarSocial" });
     </li>
     <li class="sidebar-social__item">
       <a
-        href="https://api.whatsapp.com/send/?phone=79165811715"
+        href="https://wa.me/79165811715"
         class="sidebar-social__link"
         target="_blank"
         rel="noopener noreferrer"
