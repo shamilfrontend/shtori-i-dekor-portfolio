@@ -192,6 +192,7 @@ function photoAlt(title: string, n: number) {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    min-width: 0;
 
     @media (max-width: $bp-phone) {
       gap: 20px;
@@ -200,6 +201,8 @@ function photoAlt(title: string, n: number) {
 
   &__photo {
     display: block;
+    min-width: 0;
+    max-width: 100%;
     width: 100%;
     height: auto;
   }

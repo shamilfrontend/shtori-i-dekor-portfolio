@@ -62,7 +62,8 @@ function onDecline() {
   z-index: 210;
   right: calc(var(--rightbar-width) + 16px);
   bottom: 20px;
-  width: min(300px, calc(100vw - 32px));
+  width: min(300px, calc(100% - 32px));
+  max-width: 300px;
   padding: 16px 18px;
   background: var(--color-bg);
   border: 1px solid color-mix(in srgb, var(--color-navy) 12%, transparent);

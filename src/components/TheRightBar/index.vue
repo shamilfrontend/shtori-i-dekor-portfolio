@@ -61,6 +61,7 @@ function selectLocale(next: AppLocale) {
   z-index: 100;
   width: var(--rightbar-width);
   height: 100%;
+  overflow: hidden;
   background: var(--color-navy);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 
@@ -100,18 +101,18 @@ function selectLocale(next: AppLocale) {
 
   &__hdr {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 50%;
     z-index: 1;
-    margin: 300px 0 0 44px;
-    width: 600px;
+    margin: 0;
+    max-height: calc(100% - 160px);
     font-weight: 700;
     font-size: 40px;
     line-height: 50px;
     text-align: center;
     color: #fff;
-    transform-origin: 0 0;
-    transform: rotate(-90deg);
+    writing-mode: vertical-rl;
+    transform: translate(-50%, -50%) rotate(180deg);
     white-space: nowrap;
     pointer-events: none;
   }
