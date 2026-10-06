@@ -6,7 +6,12 @@ import {
   type PortfolioItem,
 } from "../data/portfolio";
 import { servicesBase, type Service } from "../data/services";
-import { reviewsBase, type Review } from "../data/reviews";
+import {
+  reviewsBase,
+  reviewShotsBase,
+  type Review,
+  type ReviewShot,
+} from "../data/reviews";
 import { exhibitionsBase, type Exhibition } from "../data/exhibitions";
 
 function asStringArray(value: unknown): string[] {
@@ -79,6 +84,19 @@ export function useLocaleContent() {
     });
   });
 
+  const reviewShots = computed<ReviewShot[]>(() => {
+    void locale.value;
+    return reviewShotsBase.map((base) => {
+      const msg = tm(`reviewShots.${base.id}`) as Record<string, unknown>;
+      return {
+        ...base,
+        name: String(msg.name ?? ""),
+        meta: String(msg.meta ?? ""),
+        alt: String(msg.alt ?? ""),
+      };
+    });
+  });
+
   const exhibitions = computed<Exhibition[]>(() => {
     void locale.value;
     return exhibitionsBase.map((base) => {
@@ -97,6 +115,7 @@ export function useLocaleContent() {
     getPortfolioBySlug,
     services,
     reviews,
+    reviewShots,
     exhibitions,
   };
 }

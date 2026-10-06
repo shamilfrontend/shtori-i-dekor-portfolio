@@ -100,9 +100,12 @@ export default {
     },
     reviews: {
       title: "Reviews",
-      imageAlt:
-        "Curtains in an interior with panoramic windows — River Tower project",
       viewAll: "View all reviews",
+      readMore: "Read in full",
+      messengersTitle: "Messenger reviews",
+      lightboxClose: "Close",
+      lightboxPrev: "Previous review",
+      lightboxNext: "Next review",
     },
     services: {
       title: "Services & prices",
@@ -327,6 +330,78 @@ export default {
       name: "Olga",
       meta: "July 16, 2024 · Yandex Maps",
       text: "Excellent curtain salon. Designer Ekaterina is wonderful — special thanks to her for suggesting beautiful curtains and the right colour palette; the room was transformed! I recommend this salon to everyone — fast and high-quality work! Special thanks to fitter Vasiliy and the seamstress for top-level quality!!! Everything done well and on time!",
+    },
+    "6": {
+      name: "Ivanova",
+      meta: "June 19, 2024 · Yandex Maps",
+      text: "Very happy with Ekaterina’s work at this salon. She specially came to my home with fabric samples to take measurements and choose the design. The curtains and sheer turned out beautiful, excellent quality! As a gift they gave curtain tiebacks and a decorative cushion. Highly recommend the salon!",
+    },
+  },
+  reviewShots: {
+    nina: {
+      name: "Nina",
+      meta: "Telegram",
+      alt: "Telegram chat: Nina thanks them for a Roman blind",
+    },
+    natalya: {
+      name: "Natalya",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: Natalya sent curtain photos and a thank-you",
+    },
+    maria: {
+      name: "Maria",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: Maria says everything looks harmonious",
+    },
+    morning: {
+      name: "",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: a thank-you and photos of curtains at sunrise",
+    },
+    christmas: {
+      name: "",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: green curtains and a Christmas tree",
+    },
+    kids: {
+      name: "",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: a Roman blind in a child's room",
+    },
+    "grey-open": {
+      name: "",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: a review of grey made-to-measure curtains",
+    },
+    "grey-closed": {
+      name: "",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: closed grey curtains and a cushion",
+    },
+    blinds: {
+      name: "",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: blinds made and installed in a few days",
+    },
+    kitchen: {
+      name: "",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: sheer curtains in a kitchen",
+    },
+    irina: {
+      name: "Irina",
+      meta: "Telegram",
+      alt: "Telegram chat: Irina on her new curtains",
+    },
+    anastasia: {
+      name: "",
+      meta: "Telegram",
+      alt: "Telegram chat: a review of Anastasia’s work and the curtains",
+    },
+    tatyana: {
+      name: "Tatyana",
+      meta: "WhatsApp",
+      alt: "WhatsApp chat: Tatyana says she likes the curtains",
     },
   },
   exhibitions: {
