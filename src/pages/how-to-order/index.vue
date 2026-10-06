@@ -38,22 +38,19 @@ const requirements = computed(
           >
         </p>
 
+        <p>
+          {{ t("pages.howToOrder.emailLabel") }}<br />
+          <a href="mailto:shtori-i-dekor@mail.ru">shtori-i-dekor@mail.ru</a>
+        </p>
+
         <h2>{{ t("pages.howToOrder.requirementsTitle") }}</h2>
         <ul class="how-to-order-page__requirements">
-          <li v-for="(item, index) in requirements" :key="index">{{ item }}</li>
+          <li v-for="(item, index) in requirements" :key="index">
+            🔵 {{ item }}
+          </li>
         </ul>
 
         <p>{{ t("pages.howToOrder.closing") }}</p>
-        <p>{{ t("pages.howToOrder.signature") }}</p>
-
-        <p>
-          <a
-            href="https://t.me/shtori_i_dekor_ru"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ t("pages.howToOrder.channel") }}</a
-          >
-        </p>
       </div>
 
       <figure class="how-to-order-page__media">
@@ -124,8 +121,8 @@ const requirements = computed(
 
   &__requirements {
     margin: 0 0 1.2em;
-    padding: 0 0 0 1.2em;
-    list-style: disc;
+    padding: 0;
+    list-style: none;
     color: var(--color-navy);
 
     li {

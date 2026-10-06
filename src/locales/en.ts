@@ -81,6 +81,7 @@ export default {
       intro:
         "To place or estimate an order, write to us in direct messages in any messenger that is convenient for you:",
       writeLink: "Write to us",
+      emailLabel: "Or write to us by email:",
       requirementsTitle: "To estimate the cost, please send:",
       requirements: [
         "A photo or video of your interior.",
@@ -89,9 +90,7 @@ export default {
         "Your fabric preferences — colour, texture, density, and so on.",
       ],
       closing:
-        "We will prepare a preliminary estimate and set a date and time for a designer to visit your site, or arrange a meeting at our studio.",
-      signature: "With respect, the “Curtains & Decor” team",
-      channel: "t.me/shtori_i_dekor_ru",
+        "📝 We will prepare a preliminary estimate and set a date and time for a designer to visit your site 🤗 or arrange a meeting at our studio.",
       imageAlt: "Curtains and sheer in a living room — Khimki house project",
     },
     exhibitions: {
