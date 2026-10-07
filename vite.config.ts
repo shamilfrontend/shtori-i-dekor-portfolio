@@ -21,10 +21,6 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/[name]-[hash].js',
-        manualChunks: {
-          libs: ['autoprefixer'],
-          components: [],
-        },
       },
     },
   },

@@ -74,6 +74,8 @@ export default {
       address:
         "Balashikha, 10A Sovetskaya St., Pyramid shopping center, “Curtains & Decor”",
       addressInvite: "We look forward to welcoming you at our studio:",
+      portraitAlt:
+        "Olga Efremova, founder of the Curtains & Decor studio",
       imageAlt: "Curtains & Decor studio team in the showroom",
       salonPhotoAlt: "Curtains & Decor salon, photo {n}",
     },

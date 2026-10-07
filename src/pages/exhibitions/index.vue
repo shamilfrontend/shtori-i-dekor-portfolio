@@ -14,7 +14,7 @@ const { exhibitions } = useLocaleContent();
     <h1>{{ t("pages.exhibitions.title") }}</h1>
 
     <ul class="exhibitions-page__list">
-      <li v-for="item in exhibitions" :key="item.id">
+      <li v-for="(item, index) in exhibitions" :key="item.id">
         <h2>{{ item.title }}</h2>
         <p class="exhibitions-page__meta">
           {{ item.year }} · {{ item.place }}
@@ -23,6 +23,8 @@ const { exhibitions } = useLocaleContent();
           <img
             :src="withBase(item.image)"
             :alt="item.title"
+            :loading="index === 0 ? 'eager' : 'lazy'"
+            decoding="async"
           />
         </figure>
       </li>

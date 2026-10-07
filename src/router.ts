@@ -1,14 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from "./pages/home/index.vue";
-import AboutPage from "./pages/about/index.vue";
-import ServicesPage from "./pages/services-prices/index.vue";
-import ContactsPage from "./pages/contacts/index.vue";
-import PortfolioItemPage from "./pages/portfolio-item/index.vue";
-import HowToOrderPage from "./pages/how-to-order/index.vue";
-import ExhibitionsPage from "./pages/exhibitions/index.vue";
-import ReviewsPage from "./pages/reviews/index.vue";
-import PrivacyPage from "./pages/privacy/index.vue";
 
 const routes = [
   {
@@ -17,35 +9,35 @@ const routes = [
   },
   {
     path: "/portfolio/:slug",
-    component: PortfolioItemPage,
+    component: () => import("./pages/portfolio-item/index.vue"),
   },
   {
     path: "/about",
-    component: AboutPage,
+    component: () => import("./pages/about/index.vue"),
   },
   {
     path: "/how-to-order",
-    component: HowToOrderPage,
+    component: () => import("./pages/how-to-order/index.vue"),
   },
   {
     path: "/exhibitions",
-    component: ExhibitionsPage,
+    component: () => import("./pages/exhibitions/index.vue"),
   },
   {
     path: "/reviews",
-    component: ReviewsPage,
+    component: () => import("./pages/reviews/index.vue"),
   },
   {
     path: "/services-and-prices",
-    component: ServicesPage,
+    component: () => import("./pages/services-prices/index.vue"),
   },
   {
     path: "/contacts",
-    component: ContactsPage,
+    component: () => import("./pages/contacts/index.vue"),
   },
   {
     path: "/privacy",
-    component: PrivacyPage,
+    component: () => import("./pages/privacy/index.vue"),
   },
 ];
 

@@ -66,6 +66,8 @@ function photoAlt(title: string, n: number) {
         :src="src"
         :alt="photoAlt(item.title, index + 1)"
         class="project-page__photo"
+        :loading="index === 0 ? 'eager' : 'lazy'"
+        decoding="async"
       />
     </div>
   </div>

@@ -5,7 +5,12 @@ defineOptions({ name: "PortfolioCard" });
 
 defineProps<{
   item: PortfolioItem;
+  priority?: boolean;
 }>();
+
+function toWebp(src: string): string {
+  return src.replace(/\.(jpe?g|png)$/i, ".webp");
+}
 </script>
 
 <template>
@@ -14,7 +19,16 @@ defineProps<{
     class="portfolio-card"
   >
     <span class="portfolio-card__image">
-      <img :src="item.image" :alt="item.title" />
+      <picture>
+        <source :srcset="toWebp(item.image)" type="image/webp" />
+        <img
+          :src="item.image"
+          :alt="item.title"
+          :loading="priority ? 'eager' : 'lazy'"
+          :fetchpriority="priority ? 'high' : undefined"
+          decoding="async"
+        />
+      </picture>
     </span>
     <span class="portfolio-card__name">{{ item.title }}</span>
     <span class="portfolio-card__branches">{{ item.roles.join(" / ") }}</span>
@@ -50,6 +64,12 @@ defineProps<{
     position: absolute;
     inset: 0;
     overflow: hidden;
+
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 
     img {
       display: block;

@@ -10,6 +10,7 @@ const { t, tm } = useI18n();
 const services = computed(() => tm("pages.about.services") as string[]);
 
 const salonImages = [
+  { src: "/images/olga.jpg", altKey: "portraitAlt" as const, portrait: true },
   { src: "/images/team.jpg", altKey: "imageAlt" as const },
   { src: "/images/salon/01.jpg", n: 1 },
   { src: "/images/salon/02.jpg", n: 2 },
@@ -119,6 +120,7 @@ function photoAlt(image: (typeof salonImages)[number]) {
           :key="image.src"
           :src="withBase(image.src)"
           :alt="photoAlt(image)"
+          :class="{ 'about-page__media-img--portrait': 'portrait' in image && image.portrait }"
           :loading="index === 0 ? 'eager' : 'lazy'"
         />
       </div>
@@ -257,6 +259,11 @@ function photoAlt(image: (typeof salonImages)[number]) {
       height: auto;
       aspect-ratio: 3 / 2;
       object-fit: cover;
+
+      &.about-page__media-img--portrait {
+        aspect-ratio: 2 / 3;
+        object-position: top center;
+      }
     }
   }
 }

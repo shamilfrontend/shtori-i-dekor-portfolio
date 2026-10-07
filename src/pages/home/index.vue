@@ -11,9 +11,10 @@ const { portfolioItems } = useLocaleContent();
   <div class="home-page">
     <div class="works">
       <portfolio-card
-        v-for="item in portfolioItems"
+        v-for="(item, index) in portfolioItems"
         :key="item.id"
         :item="item"
+        :priority="index === 0"
       />
     </div>
   </div>

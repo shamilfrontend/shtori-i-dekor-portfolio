@@ -64,7 +64,12 @@ onUnmounted(() => {
             class="reviews-page__shot"
             @click="activeShot = index"
           >
-            <img :src="withBase(shot.src)" :alt="shot.alt" />
+            <img
+              :src="withBase(shot.src)"
+              :alt="shot.alt"
+              :loading="index === 0 ? 'eager' : 'lazy'"
+              decoding="async"
+            />
           </button>
         </li>
       </ul>
