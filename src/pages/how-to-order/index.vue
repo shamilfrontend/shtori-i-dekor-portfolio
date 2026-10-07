@@ -55,7 +55,7 @@ const requirements = computed(
 
       <figure class="how-to-order-page__media">
         <img
-          :src="withBase('/works/khimki-house/2.jpg')"
+          :src="withBase('/images/how-to-order.jpg')"
           :alt="t('pages.howToOrder.imageAlt')"
         />
       </figure>

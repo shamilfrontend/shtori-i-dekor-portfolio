@@ -75,6 +75,7 @@ export default {
         "Balashikha, 10A Sovetskaya St., Pyramid shopping center, “Curtains & Decor”",
       addressInvite: "We look forward to welcoming you at our studio:",
       imageAlt: "Curtains & Decor studio team in the showroom",
+      salonPhotoAlt: "Curtains & Decor salon, photo {n}",
     },
     howToOrder: {
       title: "How to order?",
@@ -91,7 +92,7 @@ export default {
       ],
       closing:
         "📝 We will prepare a preliminary estimate and set a date and time for a designer to visit your site 🤗 or arrange a meeting at our studio.",
-      imageAlt: "Curtains and sheer in a living room — Khimki house project",
+      imageAlt: "Selecting fabric and trim samples for an order",
     },
     exhibitions: {
       title: "Exhibitions",
@@ -126,6 +127,7 @@ export default {
       max: "Max",
       mapTitle:
         "Curtains & Decor salon on the map — Balashikha, 10A Sovetskaya St.",
+      imageAlt: "Olga Efremova at the Curtains & Decor salon entrance",
     },
     portfolioItem: {
       solvedTasks: "Completed tasks",

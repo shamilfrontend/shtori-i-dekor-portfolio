@@ -8,6 +8,20 @@ defineOptions({ name: "AboutPage" });
 const { t, tm } = useI18n();
 
 const services = computed(() => tm("pages.about.services") as string[]);
+
+const salonImages = [
+  { src: "/images/team.jpg", altKey: "imageAlt" as const },
+  { src: "/images/salon/01.jpg", n: 1 },
+  { src: "/images/salon/02.jpg", n: 2 },
+  { src: "/images/salon/03.jpg", n: 3 },
+  { src: "/images/salon/04.jpg", n: 4 },
+  { src: "/images/salon/05.jpg", n: 5 },
+];
+
+function photoAlt(image: (typeof salonImages)[number]) {
+  if ("altKey" in image) return t(`pages.about.${image.altKey}`);
+  return t("pages.about.salonPhotoAlt", { n: image.n });
+}
 </script>
 
 <template>
@@ -99,12 +113,15 @@ const services = computed(() => tm("pages.about.services") as string[]);
         </section>
       </div>
 
-      <figure class="about-page__media">
+      <div class="about-page__media">
         <img
-          :src="withBase('/images/team.jpg')"
-          :alt="t('pages.about.imageAlt')"
+          v-for="(image, index) in salonImages"
+          :key="image.src"
+          :src="withBase(image.src)"
+          :alt="photoAlt(image)"
+          :loading="index === 0 ? 'eager' : 'lazy'"
         />
-      </figure>
+      </div>
     </div>
   </div>
 </template>
@@ -224,12 +241,14 @@ const services = computed(() => tm("pages.about.services") as string[]);
   }
 
   &__media {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     margin: 0;
-    overflow: hidden;
+    min-width: 0;
 
-    @media (min-width: #{$bp-desktop + 1px}) {
-      position: sticky;
-      top: 24px;
+    @media (max-width: $bp-phone) {
+      gap: 16px;
     }
 
     img {

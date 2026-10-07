@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+import { withBase } from "../../utils/withBase";
 
 defineOptions({ name: "ContactsPage" });
 
@@ -16,66 +17,75 @@ const mapSrc = computed(() => {
   <div class="contacts-page">
     <h1>{{ t("pages.contacts.title") }}</h1>
 
-    <div class="contacts-page__info">
-      <p>
-        {{ t("pages.contacts.addressLine1") }}<br />
-        {{ t("pages.contacts.addressLine2") }}
-      </p>
-      <ul class="contacts-page__list">
-        <li>
-          <span>{{ t("pages.contacts.phoneLabel") }}:</span>
-          <a href="tel:+79165811715">+7 916 581-17-15</a>
-        </li>
-        <li>
-          <span>{{ t("pages.contacts.emailLabel") }}:</span>
-          <a href="mailto:shtori-i-dekor@mail.ru">shtori-i-dekor@mail.ru</a>
-        </li>
-        <li>
-          <span>{{ t("pages.contacts.whatsapp") }}:</span>
-          <a
-            href="https://wa.me/79165811715"
-            target="_blank"
-            rel="noopener noreferrer"
-            >+7 916 581-17-15</a
-          >
-        </li>
-        <li>
-          <span>{{ t("pages.contacts.instagram") }}:</span>
-          <a
-            href="https://instagram.com/shtoriidekor"
-            target="_blank"
-            rel="noopener noreferrer"
-            >instagram.com/shtoriidekor</a
-          >
-        </li>
-        <li>
-          <span>{{ t("pages.contacts.vk") }}:</span>
-          <a
-            href="https://vk.com/shtoriidekor"
-            target="_blank"
-            rel="noopener noreferrer"
-            >vk.com/shtoriidekor</a
-          >
-        </li>
-        <li>
-          <span>{{ t("pages.contacts.telegram") }}:</span>
-          <a
-            href="https://t.me/Olga_Efremova_shtoriidekor"
-            target="_blank"
-            rel="noopener noreferrer"
-            >t.me/Olga_Efremova_shtoriidekor</a
-          >
-        </li>
-        <li>
-          <span>{{ t("pages.contacts.max") }}:</span>
-          <a
-            href="https://max.ru/u/f9LHodD0cOIJxiQQg_DRb1p0udKpjqLkF29_qe5Qf0orTnjOJSakoy9Hitc"
-            target="_blank"
-            rel="noopener noreferrer"
-            >max.ru</a
-          >
-        </li>
-      </ul>
+    <div class="contacts-page__content">
+      <div class="contacts-page__info">
+        <p>
+          {{ t("pages.contacts.addressLine1") }}<br />
+          {{ t("pages.contacts.addressLine2") }}
+        </p>
+        <ul class="contacts-page__list">
+          <li>
+            <span>{{ t("pages.contacts.phoneLabel") }}:</span>
+            <a href="tel:+79165811715">+7 916 581-17-15</a>
+          </li>
+          <li>
+            <span>{{ t("pages.contacts.emailLabel") }}:</span>
+            <a href="mailto:shtori-i-dekor@mail.ru">shtori-i-dekor@mail.ru</a>
+          </li>
+          <li>
+            <span>{{ t("pages.contacts.whatsapp") }}:</span>
+            <a
+              href="https://wa.me/79165811715"
+              target="_blank"
+              rel="noopener noreferrer"
+              >+7 916 581-17-15</a
+            >
+          </li>
+          <li>
+            <span>{{ t("pages.contacts.instagram") }}:</span>
+            <a
+              href="https://instagram.com/shtoriidekor"
+              target="_blank"
+              rel="noopener noreferrer"
+              >instagram.com/shtoriidekor</a
+            >
+          </li>
+          <li>
+            <span>{{ t("pages.contacts.vk") }}:</span>
+            <a
+              href="https://vk.com/shtoriidekor"
+              target="_blank"
+              rel="noopener noreferrer"
+              >vk.com/shtoriidekor</a
+            >
+          </li>
+          <li>
+            <span>{{ t("pages.contacts.telegram") }}:</span>
+            <a
+              href="https://t.me/Olga_Efremova_shtoriidekor"
+              target="_blank"
+              rel="noopener noreferrer"
+              >t.me/Olga_Efremova_shtoriidekor</a
+            >
+          </li>
+          <li>
+            <span>{{ t("pages.contacts.max") }}:</span>
+            <a
+              href="https://max.ru/u/f9LHodD0cOIJxiQQg_DRb1p0udKpjqLkF29_qe5Qf0orTnjOJSakoy9Hitc"
+              target="_blank"
+              rel="noopener noreferrer"
+              >max.ru</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <figure class="contacts-page__media">
+        <img
+          :src="withBase('/images/contacts.jpg')"
+          :alt="t('pages.contacts.imageAlt')"
+        />
+      </figure>
     </div>
 
     <div class="contacts-page__map">
@@ -99,8 +109,21 @@ const mapSrc = computed(() => {
     @include page-title;
   }
 
-  &__info {
+  &__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
     margin: 0 0 40px;
+
+    @media (max-width: $bp-desktop) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__info {
+    margin: 0;
 
     p {
       margin: 0;
@@ -143,6 +166,24 @@ const mapSrc = computed(() => {
       span {
         font-weight: 400;
       }
+    }
+  }
+
+  &__media {
+    margin: 0;
+    overflow: hidden;
+
+    @media (min-width: #{$bp-desktop + 1px}) {
+      position: sticky;
+      top: 24px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
     }
   }
 
