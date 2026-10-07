@@ -405,23 +405,35 @@ export default {
     },
   },
   exhibitions: {
-    "mosbuild-2024": {
-      title: "MosBuild",
-      place: "Crocus Expo, Moscow",
-      description:
-        "Presented a fabric collection for residential and public interiors, motorized system samples, and ready textile solutions for complex window shapes.",
+    "tekstil-yug-2025": {
+      title: "Textile-South",
+      year: "June 2025",
+      place: "Sochi",
     },
-    "interior-show-2023": {
-      title: "Interior + Design",
-      place: "Expocentre, Moscow",
-      description:
-        "Took part in the decorative textiles zone: hand-pleated drapes, cushions and bedspreads in natural textures, consultations on fabric selection.",
+    "moscow-interior-week-may-2025": {
+      title: "Moscow Interior and Design Week",
+      year: "May 2025",
+      place: "Moscow",
     },
-    "balashikha-design-day-2022": {
-      title: "Design Day in Balashikha",
-      place: "Balashikha",
-      description:
-        "A local exhibition of workshops and interior designers. We showed sewing and installation work and shared experience furnishing apartments and country homes.",
+    "moscow-interior-week-aug-2026": {
+      title: "Moscow Interior and Design Week",
+      year: "August 2026",
+      place: "Moscow",
+    },
+    "homefest-sep-2026": {
+      title: "Homefest",
+      year: "September 2026",
+      place: "Moscow",
+    },
+    "podium-homefest-2025": {
+      title: "Podium Project Homefest",
+      year: "October 2025",
+      place: "Moscow",
+    },
+    "heimtextile-2026": {
+      title: "Heimtextile",
+      year: "September 2026",
+      place: "Moscow",
     },
   },
 } as const;

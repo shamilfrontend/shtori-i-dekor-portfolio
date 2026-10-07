@@ -13,24 +13,20 @@ const { exhibitions } = useLocaleContent();
   <div class="exhibitions-page">
     <h1>{{ t("pages.exhibitions.title") }}</h1>
 
-    <div class="exhibitions-page__content">
-      <ul class="exhibitions-page__list">
-        <li v-for="item in exhibitions" :key="item.id">
-          <h2>{{ item.title }}</h2>
-          <p class="exhibitions-page__meta">
-            {{ item.year }} · {{ item.place }}
-          </p>
-          <p class="exhibitions-page__text">{{ item.description }}</p>
-        </li>
-      </ul>
-
-      <figure class="exhibitions-page__media">
-        <img
-          :src="withBase('/works/areal/01.jpg')"
-          :alt="t('pages.exhibitions.imageAlt')"
-        />
-      </figure>
-    </div>
+    <ul class="exhibitions-page__list">
+      <li v-for="item in exhibitions" :key="item.id">
+        <h2>{{ item.title }}</h2>
+        <p class="exhibitions-page__meta">
+          {{ item.year }} · {{ item.place }}
+        </p>
+        <figure class="exhibitions-page__media">
+          <img
+            :src="withBase(item.image)"
+            :alt="item.title"
+          />
+        </figure>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -44,20 +40,7 @@ const { exhibitions } = useLocaleContent();
     @include page-title;
   }
 
-  &__content {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 48px;
-    align-items: start;
-
-    @media (max-width: $bp-desktop) {
-      grid-template-columns: 1fr;
-      gap: 32px;
-    }
-  }
-
   &__list {
-    max-width: 560px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -66,7 +49,7 @@ const { exhibitions } = useLocaleContent();
       margin: 0;
 
       &:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: 48px;
       }
     }
 
@@ -80,29 +63,16 @@ const { exhibitions } = useLocaleContent();
   }
 
   &__meta {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
     font-weight: 300;
     font-size: 14px;
     line-height: 1.5;
     color: var(--color-muted);
   }
 
-  &__text {
-    margin: 0;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--color-navy);
-  }
-
   &__media {
     margin: 0;
     overflow: hidden;
-
-    @media (min-width: #{$bp-desktop + 1px}) {
-      position: sticky;
-      top: 24px;
-    }
 
     img {
       display: block;

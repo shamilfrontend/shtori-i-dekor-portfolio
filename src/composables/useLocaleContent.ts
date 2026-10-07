@@ -104,8 +104,8 @@ export function useLocaleContent() {
       return {
         ...base,
         title: String(msg.title ?? ""),
+        year: String(msg.year ?? ""),
         place: String(msg.place ?? ""),
-        description: String(msg.description ?? ""),
       };
     });
   });
